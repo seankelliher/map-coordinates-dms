@@ -1,0 +1,290 @@
+/* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
+#container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+header {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    flex: initial;
+}
+
+form {
+    width: 90%;
+    margin: 0%;
+    padding: 1em 5%;
+    flex: initial;
+}
+
+fieldset {
+    width: 90%;
+    margin: 1em 0;
+    padding: 1em 5%;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*legend {
+    width: 100%;
+}*/
+
+label {
+    width: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"] {
+    width: 30%;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input[type="radio"] {
+    width: 15%;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: orange;
+}
+
+/*input[type="text"] {
+    width: 70%;
+}*/
+
+button {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    background: seagreen;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.status {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    flex: initial;
+}
+
+nav {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+figure {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    flex: initial;
+}
+
+img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    display: block;
+}
+
+/* Font styles and their media queries */
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1a1c1e;
+}
+
+li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1a1c1e;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #001e2f;
+    padding: 0.25em;
+}
+
+h1, h2, h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #1a1c1e;
+}
+
+legend, label, select, input[type="text"] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1a1c1e;
+}
+
+input::placeholder {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #bdbdbd;
+}
+
+/*button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #fff;
+}*/
+
+
+/* Media queries for fonts */
+@media (min-width: 300px) and (max-width: 399px) {
+    p {
+        font-size: 0.875em; /* 14px */
+    }
+
+    li, figcaption {
+        font-size: 0.8125em; /* 13px */
+    }
+
+    h1 {
+        font-size: 1.125em; /* 18 px */
+    }
+
+    h2 {
+        font-size: 1em; /* 16px */
+    }
+
+    h3 {
+        font-size: 0.875em; /* 14px */
+    }
+
+    legend, label, select, input::placeholder, input[type="text"], button {
+        font-size: 0.875em; /* 14px */
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    p {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    li, figcaption {
+        font-size: 0.875em; /* 14px */
+    }
+
+    h1 {
+        font-size: 1.1875em; /* 19px */
+    }
+
+    h2 {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    h3 {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    legend, label, select, input::placeholder, input[type="text"], button {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    p {
+        font-size: 1em; /* 16px */
+    }
+
+    li, figcaption {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    h1 {
+        font-size: 1.25em; /* 20px */
+    }
+
+    h2 {
+        font-size: 1.125em; /* 18 px */
+    }
+
+    h3 {
+        font-size: 1em; /* 16px */
+    }
+
+    legend, label, select, input::placeholder, input[type="text"], button {
+        font-size: 1em; /* 16px */
+    }
+}
+
+@media (min-width: 600px) {
+    p {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    li, figcaption {
+        font-size: 1em; /* 16px */
+    }
+
+    h1 {
+        font-size: 1.3125em; /* 21px */
+    }
+
+    h2 {
+        font-size: 1.1875em; /* 19px */
+    }
+
+    h3 {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    legend, label, select, input::placeholder, input[type="text"], button {
+        font-size: 1.0625em; /* 17px */
+    }
+}
