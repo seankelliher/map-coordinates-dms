@@ -1,19 +1,12 @@
 <script setup>
-// import { ref } from "vue";
-defineProps({
-    step: {
-        type: String,
-        required: true
-    }
-});
+import { store } from "../composables/store.js";
 
-defineEmits(["update:step"]);
 </script>
 
 <template>
-    <section v-if="`${step}` === 'step6'">
+    <section v-if="store.step === 'step6'">
         <div class="status">
-            <h2>Result - {{ step }}</h2>
+            <h2>Result - {{ store.step }}</h2>
             <p>Here are your coordinates in Digital Degrees format with ADD .</p>
 
             <ul>
@@ -24,7 +17,7 @@ defineEmits(["update:step"]);
         </div>
 
         <nav>
-            <button @click="$emit('update:step', 'step1')">Start over</button>
+            <button @click="store.updateStep('step1')">Start over</button>
         </nav>
     </section>
 </template>

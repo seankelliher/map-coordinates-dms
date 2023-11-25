@@ -1,94 +1,12 @@
 <script setup>
-import { ref } from "vue";
-
-defineProps({
-    step: {
-        type: String,
-        required: true
-    },
-    latDegs: {
-        type: String,
-        required: true
-    },
-    latMins: {
-        type: String,
-        required: true
-    },
-    latSecs: {
-        type: String,
-        required: true
-    },
-    latHems: {
-        type: String,
-        required: true
-    }
-});
-
-defineEmits([
-    "update:step",
-    "update:latDegs",
-    "update:latMins",
-    "update:latSecs",
-    "update:latHems"
-]);
-
-const errorDegs = ref(false);
-const errorMins = ref(false);
-const errorSecs = ref(false);
-const errorHems = ref(false);
-
-function checkLatDegs(etv) {
-    if (etv >= 0 && etv <=90) {
-        errorDegs.value = false;
-    } else {
-        errorDegs.value = true;
-    }
-}
-
-function checkLatMins(etv) {
-    if (etv >= 0 && etv <=60) {
-        errorMins.value = false;
-    } else {
-        errorMins.value = true;
-    }
-}
-
-function checkLatSecs(etv) {
-    if (etv >= 0 && etv <=60) {
-        errorSecs.value = false;
-    } else {
-        errorSecs.value = true;
-    }
-}
-
-function checkLatHems(etv) {
-    if (etv === "north" || etv === "south") {
-        errorHems.value = false;
-    } else {
-        errorHems.value = true;
-    }
-}
-
-function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
-    if (latDegs === "" || latDegs < 0 || latDegs > 90) {
-        errorDegs.value = true;
-    } else if (latMins === "" || latMins < 0 || latMins > 60) {
-        errorMins.value = true;
-    } else if (latSecs === "" || latSecs < 0 || latSecs > 60) {
-        errorSecs.value = true;
-    } else if (latHems === "") {
-        errorHems.value = true;
-    } else {
-        return "all good";
-    }
-}
+import { store } from "../composables/store.js";
 
 </script>
 
 <template>
-    <section v-if="`${step}` === 'step3'">
+    <section v-if="store.step === 'step3'">
         <form>
-            <h2>Latitude - {{ step }}</h2>
+            <h2>Latitude - {{ store.step }}</h2>
             <h3>Next, we'll gather latitude coordinates.</h3>
             <fieldset>
                 <!--<legend>Next, we'll gather latitude coordinates.</legend>-->
@@ -100,10 +18,10 @@ function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
                     name="lat-degs"
                     minlength="1"
                     maxlength="2"
-                    @change="$emit('update:latDegs', $event.target.value)"
-                    @input="checkLatDegs($event.target.value)"
+                    :value="`${store.latDegs}`"
+                    @input="store.updateLatDegs($event.target.value)"
                 >
-                <p class="error" v-if="errorDegs">Enter a number 0 - 90</p>
+                <p class="error" v-if="store.latDegsError">Enter a number 0 - 90</p>
             </fieldset>
 
             <fieldset>
@@ -114,10 +32,10 @@ function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
                     name="lat-mins"
                     minlength="1"
                     maxlength="2"
-                    @change="$emit('update:latMins', $event.target.value)"
-                    @input="checkLatMins($event.target.value)"
+                    :value="`${store.latMins}`"
+                    @input="store.updateLatMins($event.target.value)"
                 >
-                <p class="error" v-if="errorMins">Enter a number 0 - 60</p>
+                <p class="error" v-if="store.latMinsError">Enter a number 0 - 60</p>
             </fieldset>
             <fieldset>
                 <label for="lat-secs">How many seconds?</label>
@@ -127,10 +45,10 @@ function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
                     name="lat-secs"
                     minlength="1"
                     maxlength="2"
-                    @change="$emit('update:latSecs', $event.target.value)"
-                    @input="checkLatSecs($event.target.value)"
+                    :value="`${store.latSecs}`"
+                    @input="store.updateLatSecs($event.target.value)"
                 >
-                <p class="error" v-if="errorSecs">Enter a number 0 - 60</p>
+                <p class="error" v-if="store.latSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
             <h3>And, then enter a hemisphere.</h3>
@@ -143,8 +61,8 @@ function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
                     id="lat-north"
                     name="lat-hems"
                     value="north"
-                    @change="$emit('update:latHems', $event.target.value)"
-                    @input="checkLatHems($event.target.value)"
+                    @input="store.updateLatHems($event.target.value)"
+                    :checked="store.latHems === 'north'"
                 >
                 <label for="lat-north">North</label>
 
@@ -154,18 +72,19 @@ function checkLatSuccess(latDegs, latMins, latSecs, latHems) {
                     name="lat-hems"
                     value="south"
                     @change="$emit('update:latHems', $event.target.value)"
-                    @input="checkLatHems($event.target.value)"
+                    @input="store.updateLatHems($event.target.value)"
+                    :checked="store.latHems === 'south'"
                 >
 
                 <label for="lat-south">South</label>
 
-                <p class="error" v-if="errorHems">Choose a hemisphere</p>
+                <p class="error" v-if="store.latHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
 
         <nav>
-            <button @click="$emit('update:step', 'step2')">Previous</button>
-            <button @click="checkLatSuccess(latDegs, latMins, latSecs, latHems) ? $emit('update:step', 'step4') : ''">Next</button>
+            <button @click="store.updateStep('step2')">Previous</button>
+            <button @click="store.checkLatSuccess() ? store.updateStep('step4') : ''">Next</button>
         </nav>
     </section>
 

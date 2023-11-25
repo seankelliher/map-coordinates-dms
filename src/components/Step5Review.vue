@@ -1,32 +1,25 @@
 <script setup>
-// import { ref } from "vue";
-defineProps({
-    step: {
-        type: String,
-        required: true
-    }
-});
+import { store } from "../composables/store.js";
 
-defineEmits(["update:step"]);
 </script>
 
 <template>
-    <section v-if="`${step}` === 'step5'">
+    <section v-if="store.step === 'step5'">
         <div class="status">
-            <h2>Review - {{ step }}</h2>
+            <h2>Review - {{ store.step }}</h2>
             <h3>Let's review what you entered.</h3>
             <p>You entered these coordinates. Does everything look okay?</p>
 
             <ul>
-                <li>Longitude in DMS format</li>
-                <li>Latitude in DMS format</li>
-                <li>Selected percision</li>
+                <li>Longitude: {{ store.lonDegs }} degrees, {{ store.lonMins }} minutes, {{ store.lonSecs }} seconds</li>
+                <li>Latitude: {{ store.latDegs }} degrees, {{ store.latMins }} minutes, {{ store.latSecs }} seconds</li>
+                <li>Percision: {{ store.percision }}</li>
             </ul>
         </div>
 
         <nav>
-            <button @click="$emit('update:step', 'step4')">No, previous</button>
-            <button @click="$emit('update:step', 'step6')">Yes, convert</button>
+            <button @click="store.updateStep('step4')">No, previous</button>
+            <button @click="store.updateStep('step6')">Yes, convert</button>
         </nav>
     </section>
 </template>
