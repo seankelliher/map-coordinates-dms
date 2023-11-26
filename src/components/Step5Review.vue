@@ -11,9 +11,16 @@ import { store } from "../composables/store.js";
             <p>You entered these coordinates. Does everything look okay?</p>
 
             <ul>
-                <li>Longitude: {{ store.lonDegs }} degrees, {{ store.lonMins }} minutes, {{ store.lonSecs }} seconds</li>
-                <li>Latitude: {{ store.latDegs }} degrees, {{ store.latMins }} minutes, {{ store.latSecs }} seconds</li>
-                <li>Percision: {{ store.percision }}</li>
+                <li>Longitude: {{ store.lonDegs }} degrees, {{ store.lonMins }} minutes, {{ store.lonSecs }} seconds {{ store.lonHems.toUpperCase() }}</li>
+                <li>Latitude: {{ store.latDegs }} degrees, {{ store.latMins }} minutes, {{ store.latSecs }} seconds {{ store.latHems.toUpperCase() }}</li>
+                <li>Percision:
+                    <span v-if="store.percision === '0'">within 111km</span>
+                    <span v-if="store.percision === '1'">11.1km</span>
+                    <span v-if="store.percision === '2'">1.11km</span>
+                    <span v-if="store.percision === '3'">111 meters</span>
+                    <span v-if="store.percision === '4'">11.1 meters</span>
+                    <span v-if="store.percision === '5'">1.11 meters</span>  
+                </li>
             </ul>
         </div>
 
