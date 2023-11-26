@@ -1,6 +1,25 @@
 <script setup>
 import { store } from "../composables/store.js";
+import { ref } from "vue";
 
+const percisionError = ref(false);
+
+function updatePercision(etv) {
+    if (etv === ""){
+        percisionError.value = true;
+    } else {
+        percisionError.value = false;
+        store.percision = etv;
+    }
+}
+
+function checkPercisionSuccess() {
+    if (store.percision === "") {
+        percisionError.value = true; 
+    } else {
+        return true;
+    }
+}
 </script>
 
 <template>
@@ -12,71 +31,71 @@ import { store } from "../composables/store.js";
             <fieldset>
                 <!-- <legend>More numbers after the decimal point bring greater percison, but also require more computing power to run mapping software. How much percison do you need?</legend> -->
 
-                <label for="level6">within 111km (not recommended)</label>
+                <label for="decimal0">within 111km (not recommended)</label>
                 <input
                     type="radio"
-                    id="level6"
+                    id="decimal0"
                     name="percision"
-                    value="level6"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level6'"
+                    value="0"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 0"
                 >
 
-                <label for="level5">within 11.1km</label>
+                <label for="decimal1">within 11.1km</label>
                 <input
                     type="radio"
-                    id="level5"
+                    id="decimal1"
                     name="percision"
-                    value="level5"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level5'"
+                    value="1"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 1"
                 >
 
-                <label for="level4">within 1.1km</label>
+                <label for="decimal2">within 1.11km</label>
                 <input
                     type="radio"
-                    id="level4"
+                    id="decimal2"
                     name="percision"
-                    value="level4"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level4'"
+                    value="2"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 2"
                 >
 
-                <label for="level3">within 111 meters</label>
+                <label for="decimal3">within 111 meters</label>
                 <input
                     type="radio"
-                    id="level3"
+                    id="decimal3"
                     name="percision"
-                    value="level3"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level3'"
+                    value="3"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 3"
                 >
 
-                <label for="level2">within 11.1 meters</label>
+                <label for="decimal4">within 11.1 meters</label>
                 <input
                     type="radio"
-                    id="level2"
+                    id="decimal4"
                     name="percision"
-                    value="level2"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level2'"
+                    value="4"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 4"
                 >
 
-                <label for="level1">within 1.11 meters</label>
+                <label for="decimal5">within 1.11 meters</label>
                 <input
                     type="radio"
-                    id="level1"
+                    id="decimal5"
                     name="percision"
-                    value="level1"
-                    @input="store.updatePercision($event.target.value)"
-                    :checked="store.percision === 'level1'"
+                    value="5"
+                    @input="updatePercision($event.target.value)"
+                    :checked="store.percision === 5"
                 >
-                <p class="error" v-if="store.percisionError">Choose a level of percision.</p>
+                <p class="error" v-if="percisionError">Choose a level of percision.</p>
             </fieldset>
         </form>
         <nav>
             <button @click="store.updateStep('step3')">Previous</button>
-            <button @click="store.checkPercisionSuccess() ? store.updateStep('step5') : ''">Next</button>
+            <button @click="checkPercisionSuccess() ? store.updateStep('step5') : ''">Next</button>
         </nav>
     </section>
 </template>

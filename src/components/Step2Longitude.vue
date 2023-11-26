@@ -1,5 +1,64 @@
 <script setup>
 import { store } from "../composables/store.js";
+import { ref } from "vue";
+
+const lonDegsError = ref(false);
+const lonMinsError = ref(false);
+const lonSecsError = ref(false);
+const lonHemsError = ref(false);
+
+function updateLonDegs(etv) {
+    if (etv >= 0 && etv <=180) {
+        lonDegsError.value = false;
+        store.lonDegs = etv;
+    } else {
+        lonDegsError.value = true;
+        store.lonDegs = etv; // Allows full "bad number" to display in input.
+    }
+}
+
+function updateLonMins(etv) {
+    if (etv >= 0 && etv <=60) {
+        lonMinsError.value = false;
+        store.lonMins = etv;
+    } else {
+        lonMinsError.value = true;
+        store.lonMins = etv;
+    }
+}
+
+function updateLonSecs(etv) {
+    if (etv >= 0 && etv <=60) {
+        lonSecsError.value = false;
+        store.lonSecs = etv;
+    } else {
+        lonSecsError.value = true;
+        store.lonSecs = etv;
+    }
+}
+
+function updateLonHems(etv) {
+    if (etv === "") {
+        lonHemsError.value = true;
+    } else {
+        lonHemsError.value = false;
+        store.lonHems = etv;
+    }
+}
+
+function checkLonSuccess() {
+    if (store.lonDegs === "" || store.lonDegs < 0 || store.lonDegs > 180) {
+        lonDegsError.value = true;
+    } else if (store.lonMins === "" || store.lonMins < 0 || store.lonMins > 60) {
+        lonMinsError.value = true;
+    } else if (store.lonSecs === "" || store.lonSecs < 0 || store.lonSecs > 60) {
+        lonSecsError.value = true;
+    } else if (store.lonHems === "") {
+        lonHemsError.value = true;
+    } else {
+        return true;
+    }
+}
 
 </script>
 
@@ -19,9 +78,9 @@ import { store } from "../composables/store.js";
                     minlength="1"
                     maxlength="3"
                     :value="`${store.lonDegs}`"
-                    @input="store.updateLonDegs($event.target.value)"
+                    @input="updateLonDegs($event.target.value)"
                 >
-                <p class="error" v-if="store.lonDegsError">Enter a number 0 - 180</p>
+                <p class="error" v-if="lonDegsError">Enter a number 0 - 180</p>
             </fieldset>
 
             <fieldset>
@@ -33,9 +92,9 @@ import { store } from "../composables/store.js";
                     minlength="1"
                     maxlength="2"
                     :value="`${store.lonMins}`"
-                    @input="store.updateLonMins($event.target.value)"
+                    @input="updateLonMins($event.target.value)"
                 >
-                <p class="error" v-if="store.lonMinsError">Enter a number 0 - 60</p>
+                <p class="error" v-if="lonMinsError">Enter a number 0 - 60</p>
             </fieldset>
             <fieldset>
                 <label for="lon-secs">How many seconds?</label>
@@ -46,9 +105,9 @@ import { store } from "../composables/store.js";
                     minlength="1"
                     maxlength="2"
                     :value="`${store.lonSecs}`"
-                    @input="store.updateLonSecs($event.target.value)"
+                    @input="updateLonSecs($event.target.value)"
                 >
-                <p class="error" v-if="store.lonSecsError">Enter a number 0 - 60</p>
+                <p class="error" v-if="lonSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
             <h3>And, then enter a hemisphere.</h3>
@@ -61,7 +120,7 @@ import { store } from "../composables/store.js";
                     id="lon-east"
                     name="lon-hems"
                     value="east"
-                    @input="store.updateLonHems($event.target.value)"
+                    @input="updateLonHems($event.target.value)"
                     :checked="store.lonHems === 'east'"
                 >
                 <label for="lon-east">East</label>
@@ -71,18 +130,19 @@ import { store } from "../composables/store.js";
                     id="lon-west"
                     name="lon-hems"
                     value="west"
-                    @input="store.updateLonHems($event.target.value)"
+                    @input="updateLonHems($event.target.value)"
                     :checked="store.lonHems === 'west'"
                 >
 
                 <label for="lon-west">West</label>
 
-                <p class="error" v-if="store.lonHemsError">Choose a hemisphere</p>
+                <p class="error" v-if="lonHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
 
         <nav>
-            <button @click="store.checkLonSuccess() ? store.updateStep('step3') : ''">Next</button>
+            <button @click="store.updateStep('step1')">Previous</button>
+            <button @click="checkLonSuccess() ? store.updateStep('step3') : ''">Next</button>
         </nav>
     </section>
 
