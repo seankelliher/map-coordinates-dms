@@ -41,11 +41,14 @@ function convertLat() {
 </script>
 
 <template>
-    <section v-if="store.step === 'step6'">
-        <div class="status">
-            <h2>Result - {{ store.step }}</h2>
-            <p>Here are your coordinates in Digital Degrees format.</p>
+    <main v-if="store.step === 'step6'">
+        <section>
+            <h2>Results</h2>
+            <h3>Here are your coordinates.</h3>
+        </section>
 
+        <div class="results">
+            <p>You may use these in computer-based mapping software such as Mapbox, CARTO, and Google Maps.</p>
             <ul>
                 <li>Longitude: {{ convertLon() }} Digital Degrees</li>
                 <li>Latitude: {{ convertLat() }} Digital Degrees</li>
@@ -63,7 +66,7 @@ function convertLat() {
         <nav>
             <button @click="store.updateStep('step1'), store.resetVars()">Start over</button>
         </nav>
-    </section>
+    </main>
 </template>
 
 <style scoped>

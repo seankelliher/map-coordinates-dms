@@ -4,12 +4,14 @@ import { store } from "../composables/store.js";
 </script>
 
 <template>
-    <section v-if="store.step === 'step5'">
-        <div class="status">
-            <h2>Review - {{ store.step }}</h2>
+    <main v-if="store.step === 'step5'">
+        <section>
+            <h2>Review</h2>
             <h3>Let's review what you entered.</h3>
-            <p>You entered these coordinates. Does everything look okay?</p>
+        </section>
 
+        <div class="results">
+            <p>You entered these coordinates. Does everything look okay?</p>
             <ul>
                 <li>Longitude: {{ store.lonDegs }} degrees, {{ store.lonMins }} minutes, {{ store.lonSecs }} seconds {{ store.lonHems.toUpperCase() }}</li>
                 <li>Latitude: {{ store.latDegs }} degrees, {{ store.latMins }} minutes, {{ store.latSecs }} seconds {{ store.latHems.toUpperCase() }}</li>
@@ -28,7 +30,7 @@ import { store } from "../composables/store.js";
             <button @click="store.updateStep('step4')">No, previous</button>
             <button @click="store.updateStep('step6')">Yes, convert</button>
         </nav>
-    </section>
+    </main>
 </template>
 
 <style scoped>

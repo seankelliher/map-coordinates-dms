@@ -10,6 +10,9 @@ import Step6Result from "./Step6Result.vue";
 
 <template>
     <div id="container">
+        <header>
+            <h1>Map coordinates</h1>
+        </header>
         <Step1Introduction />
         <Step2Longitude />
         <Step3Latitude />

@@ -63,10 +63,12 @@ function checkLonSuccess() {
 </script>
 
 <template>
-    <section v-if="store.step === 'step2'">
-        <form>
-            <h2>Longitude - {{ store.step }}</h2>
+    <main v-if="store.step === 'step2'">
+        <section>
+            <h2>Longitude</h2>
             <h3>First we'll gather longitude coordinates.</h3>
+        </section>
+        <form>
             <fieldset>
                 <!--<legend>First we'll gather longitude coordinates.</legend>-->
 
@@ -139,13 +141,11 @@ function checkLonSuccess() {
                 <p class="error" v-if="lonHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
-
         <nav>
             <button @click="store.updateStep('step1')">Previous</button>
             <button @click="checkLonSuccess() ? store.updateStep('step3') : ''">Next</button>
         </nav>
-    </section>
-
+    </main>
 </template>
 
 <style scoped>

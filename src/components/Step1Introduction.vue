@@ -3,16 +3,18 @@ import { store } from "../composables/store.js";
 </script>
 
 <template>
-    <section v-if="store.step === 'step1'">
-        <div class="status">
-            <h2>Intro - {{ store.step }}</h2>
+    <main v-if="store.step === 'step1'">
+        <section>
+            <h2>Introduction</h2>
+            <h3>Let's get started on our coordinates.</h3>
+        </section>
+        <div class="results">
             <p>We are going to convert longitude and latitude coordinates in the Degress, Minutes, Seconds format to the Digital Degrees format to use in computer-based mapping.</p>
         </div>
-
         <nav>
             <button @click="store.updateStep('step2')">Start</button>
         </nav>
-    </section>
+    </main>
 </template>
 
 <style scoped>

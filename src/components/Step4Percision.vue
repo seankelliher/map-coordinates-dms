@@ -23,10 +23,12 @@ function checkPercisionSuccess() {
 </script>
 
 <template>
-    <section v-if="store.step === 'step4'">
-        <form>
-            <h2>Percision - {{ store.step }}</h2>
+    <main v-if="store.step === 'step4'">
+        <section>
+            <h2>Percision</h2>
             <h3>Now, we'll decide percision.</h3>
+        </section>
+        <form>
             <p>More numbers after the decimal point bring greater percison, but also require more computing power to run mapping software. How much percison do you need?</p>
             <fieldset>
                 <!-- <legend>More numbers after the decimal point bring greater percison, but also require more computing power to run mapping software. How much percison do you need?</legend> -->
@@ -97,7 +99,7 @@ function checkPercisionSuccess() {
             <button @click="store.updateStep('step3')">Previous</button>
             <button @click="checkPercisionSuccess() ? store.updateStep('step5') : ''">Next</button>
         </nav>
-    </section>
+    </main>
 </template>
 
 <style scoped>

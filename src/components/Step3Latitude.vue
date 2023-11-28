@@ -64,10 +64,12 @@ function checkLatSuccess() {
 </script>
 
 <template>
-    <section v-if="store.step === 'step3'">
-        <form>
-            <h2>Latitude - {{ store.step }}</h2>
+    <main v-if="store.step === 'step3'">
+        <section>
+            <h2>Latitude</h2>
             <h3>Next, we'll gather latitude coordinates.</h3>
+        </section>
+        <form>
             <fieldset>
                 <!--<legend>Next, we'll gather latitude coordinates.</legend>-->
 
@@ -145,7 +147,7 @@ function checkLatSuccess() {
             <button @click="store.updateStep('step2')">Previous</button>
             <button @click="checkLatSuccess() ? store.updateStep('step4') : ''">Next</button>
         </nav>
-    </section>
+    </main>
 
 </template>
 
