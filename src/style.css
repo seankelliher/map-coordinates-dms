@@ -1,12 +1,15 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
+html {
+    background: #fefbff;
+}
 #container {
     width: 100%;
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center; /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
@@ -17,10 +20,30 @@ header {
     flex: initial;
 }
 
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+section {
+    width: 80%;
+    margin: 0.5em 5%;
+    padding: 0 5%;
+    background: #d4e3ff; /* light blue, tertiary 90 */
+    border-radius: 8px;
+    flex: initial;
+}
+
 form {
     width: 90%;
     margin: 0%;
-    padding: 1em 5%;
+    padding: 0 5%;
     flex: initial;
 }
 
@@ -28,7 +51,7 @@ fieldset {
     width: 90%;
     margin: 1em 0;
     padding: 1em 5%;
-    border: 2px solid #eee;
+    border: 2px solid #ebf1ff; /* light blue, tertiary 95 */
     border-radius: 8px;
     flex: initial;
     display: flex;
@@ -55,7 +78,7 @@ input[type="text"] {
 
 input[type="radio"] {
     width: 15%;
-    margin: 0;
+    margin: 0.75em;
     padding: 0;
 }
 
@@ -63,42 +86,14 @@ input[type="radio"] {
     width: 100%;
     margin: 0;
     padding: 0;
-    color: orange;
+    color: #ba1a1a;
 }
 
 /*input[type="text"] {
     width: 70%;
 }*/
 
-button {
-    width: 30%;
-    margin: 0;
-    padding: 0;
-    background: seagreen;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.status {
+.results {
     width: 90%;
     margin: 0;
     padding: 0 5%;
@@ -108,12 +103,29 @@ section {
 nav {
     width: 90%;
     margin: 0;
-    padding: 0 5%;
+    padding: 1em 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+button {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    background: #115fab; /* tertiary */
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 figure {
@@ -133,16 +145,16 @@ img {
 /* Font styles and their media queries */
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.8;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #001849;
 }
 
 li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.8;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #001849;
     margin: 0;
     padding: 0;
 }
@@ -159,14 +171,14 @@ h1, h2, h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
-    color: #1a1c1e;
+    color: #001849;
 }
 
 legend, label, select, input[type="text"] {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #001849;
 }
 
 input::placeholder {
