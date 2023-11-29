@@ -59,19 +59,16 @@ function checkLonSuccess() {
         return true;
     }
 }
-
 </script>
 
 <template>
     <main v-if="store.step === 'step2'">
         <section>
-            <h2>Longitude</h2>
-            <h3>First we'll gather longitude coordinates.</h3>
+            <h1>We'll gather longitude coordinates.</h1>
         </section>
+
         <form>
             <fieldset>
-                <!--<legend>First we'll gather longitude coordinates.</legend>-->
-
                 <label for="lon-degs">How many degrees?</label>
                 <input
                     type="text"
@@ -98,6 +95,7 @@ function checkLonSuccess() {
                 >
                 <p class="error" v-if="lonMinsError">Enter a number 0 - 60</p>
             </fieldset>
+
             <fieldset>
                 <label for="lon-secs">How many seconds?</label>
                 <input
@@ -112,11 +110,9 @@ function checkLonSuccess() {
                 <p class="error" v-if="lonSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
-            <h3>And, then enter a hemisphere.</h3>
+            <h2>And, then enter a hemisphere.</h2>
+
             <fieldset>
-
-                <!--<legend>Which hemisphere - East or West?</legend>-->
-
                 <input
                     type="radio"
                     id="lon-east"
@@ -126,7 +122,6 @@ function checkLonSuccess() {
                     :checked="store.lonHems === 'east'"
                 >
                 <label for="lon-east">East</label>
-
                 <input
                     type="radio"
                     id="lon-west"
@@ -135,12 +130,11 @@ function checkLonSuccess() {
                     @input="updateLonHems($event.target.value)"
                     :checked="store.lonHems === 'west'"
                 >
-
                 <label for="lon-west">West</label>
-
                 <p class="error" v-if="lonHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
+
         <nav>
             <button @click="store.updateStep('step1')">Previous</button>
             <button @click="checkLonSuccess() ? store.updateStep('step3') : ''">Next</button>

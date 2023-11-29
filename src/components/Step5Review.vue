@@ -1,13 +1,11 @@
 <script setup>
 import { store } from "../composables/store.js";
-
 </script>
 
 <template>
     <main v-if="store.step === 'step5'">
         <section>
-            <h2>Review</h2>
-            <h3>Let's review what you entered.</h3>
+            <h1>Let's review your coordinates.</h1>
         </section>
 
         <div class="results">

@@ -7,7 +7,6 @@ const latMinsError = ref(false);
 const latSecsError = ref(false);
 const latHemsError = ref(false);
 
-
 function updateLatDegs(etv) {
     if (etv >= 0 && etv <=90) {
         latDegsError.value = false;
@@ -60,19 +59,16 @@ function checkLatSuccess() {
         return true;
     }
 }
-
 </script>
 
 <template>
     <main v-if="store.step === 'step3'">
         <section>
-            <h2>Latitude</h2>
-            <h3>Next, we'll gather latitude coordinates.</h3>
+            <h1>Next, we'll gather latitude coordinates.</h1>
         </section>
+
         <form>
             <fieldset>
-                <!--<legend>Next, we'll gather latitude coordinates.</legend>-->
-
                 <label for="lat-degs">How many degrees?</label>
                 <input
                     type="text"
@@ -99,6 +95,7 @@ function checkLatSuccess() {
                 >
                 <p class="error" v-if="latMinsError">Enter a number 0 - 60</p>
             </fieldset>
+
             <fieldset>
                 <label for="lat-secs">How many seconds?</label>
                 <input
@@ -113,11 +110,9 @@ function checkLatSuccess() {
                 <p class="error" v-if="latSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
-            <h3>And, then enter a hemisphere.</h3>
+            <h2>And, then enter a hemisphere.</h2>
+
             <fieldset>
-
-                <!--<legend>Which hemisphere - North or South?</legend>-->
-
                 <input
                     type="radio"
                     id="lat-north"
@@ -127,7 +122,6 @@ function checkLatSuccess() {
                     :checked="store.latHems === 'north'"
                 >
                 <label for="lat-north">North</label>
-
                 <input
                     type="radio"
                     id="lat-south"
@@ -136,9 +130,7 @@ function checkLatSuccess() {
                     @input="updateLatHems($event.target.value)"
                     :checked="store.latHems === 'south'"
                 >
-
                 <label for="lat-south">South</label>
-
                 <p class="error" v-if="latHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
@@ -148,7 +140,6 @@ function checkLatSuccess() {
             <button @click="checkLatSuccess() ? store.updateStep('step4') : ''">Next</button>
         </nav>
     </main>
-
 </template>
 
 <style scoped>

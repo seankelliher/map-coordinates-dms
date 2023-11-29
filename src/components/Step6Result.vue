@@ -43,8 +43,7 @@ function convertLat() {
 <template>
     <main v-if="store.step === 'step6'">
         <section>
-            <h2>Results</h2>
-            <h3>Here are your coordinates.</h3>
+            <h1>Here are your results.</h1>
         </section>
 
         <div class="results">
