@@ -40,7 +40,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="0"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 0"
+                    :checked="store.percision === '0'"
                 >
 
                 <label for="decimal1">within 11.1km</label>
@@ -50,7 +50,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="1"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 1"
+                    :checked="store.percision === '1'"
                 >
 
                 <label for="decimal2">within 1.11km</label>
@@ -60,7 +60,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="2"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 2"
+                    :checked="store.percision === '2'"
                 >
 
                 <label for="decimal3">within 111 meters</label>
@@ -70,7 +70,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="3"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 3"
+                    :checked="store.percision === '3'"
                 >
 
                 <label for="decimal4">within 11.1 meters</label>
@@ -80,7 +80,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="4"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 4"
+                    :checked="store.percision === '4'"
                 >
 
                 <label for="decimal5">within 1.11 meters</label>
@@ -90,7 +90,7 @@ function checkPercisionSuccess() {
                     name="percision"
                     value="5"
                     @input="updatePercision($event.target.value)"
-                    :checked="store.percision === 5"
+                    :checked="store.percision === '5'"
                 >
                 <p class="error" v-if="percisionError">Choose a level of percision.</p>
             </fieldset>
