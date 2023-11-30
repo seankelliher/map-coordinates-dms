@@ -27,11 +27,12 @@ main {
 
 section {
     width: 80%;
-    margin: 0.5em 5%;
+    margin: 1em 5%;
     padding: 0 5%;
     background: #ece1cf;
     border-radius: 8px;
     flex: initial;
+    animation: fadeIn 1s;
 }
 
 form {
@@ -150,20 +151,52 @@ button:hover {
     cursor: pointer;
 }
 
-/* figure not used yet */
 figure {
     width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin: 0;
+    padding: 0 5%;
     flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* main axis */
+    align-items: flex-start; /* cross axis */
+    animation: fadeInDelayed 2s;
 }
 
-/* img not used yet */
 img {
     width: 100%;
-    max-width: 240px;
+    max-width: 48px;
     height: auto;
     display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* transform:translate(0, -5px); */
+    }
+
+    100% {
+        opacity: 1;
+        /* transform:translate(0, 0); */
+    }
+}
+
+@keyframes fadeInDelayed {
+    0% {
+        opacity: 0;
+        /* transform:translate(0, -5px); */
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        /* transform:translate(0, 0); */
+    }
 }
 
 /* Font styles and their media queries */
