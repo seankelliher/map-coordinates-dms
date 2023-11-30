@@ -46,6 +46,10 @@ function convertLat() {
             <h1>Here are your results.</h1>
         </section>
 
+        <figure>
+            <img src="images/task-alt-48-icon.svg" alt="check icon">
+        </figure>
+
         <div class="results">
             <p>You may use these in computer-based mapping software such as Mapbox, CARTO, and Google Maps.</p>
             <ul>
