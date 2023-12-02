@@ -1,11 +1,11 @@
-[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/map-coordinates?style=flat-square)](/LICENSE.txt)
+[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/map-coordinates-dms?style=flat-square)](/LICENSE.txt)
 ## Map Coordinates DMS
 
 Guided interface to convert longitude and latitude coordinates from the traditional Degrees Minutes, Seconds (DMS) format to the Digital Degrees (DD) format used in computer-based mapping. Interface built with Vue.js. [View working component](https://sean-kelliher-map-coordinates-dms.netlify.app).
 
 ## Project Status
 
-IN DEVELOPMENT: mostly build, now testing.
+IN DEVELOPMENT: mostly built, now testing.
 
 ## Project Screen Shots
 
