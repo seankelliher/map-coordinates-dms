@@ -5,6 +5,7 @@ import Step3Latitude from "./components/Step3Latitude.vue";
 import Step4Percision from "./components/Step4Percision.vue";
 import Step5Review from "./components/Step5Review.vue";
 import Step6Result from "./components/Step6Result.vue";
+import AreaMap from "./components/AreaMap.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Step6Result from "./components/Step6Result.vue";
         <Step4Percision />
         <Step5Review />
         <Step6Result />
+        <AreaMap />
     </div>
 </template>
 

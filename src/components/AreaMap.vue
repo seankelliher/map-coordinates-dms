@@ -1,18 +1,8 @@
 <script setup>
-import { onMounted, onUnmounted, defineConfig } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import mapboxgl from "mapbox-gl";
 import { store } from "../composables/store.js";
 import "../../node_modules/mapbox-gl/dist/mapbox-gl.css";
-
-defineConfig({
-    main: {
-        build: {
-            rollupOptions: {
-                external: ["mapboxgl"]
-            }
-        }
-    }
-});
 
 // Token restricted to single URL.
 mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xwb2E5c2NkMGx1NDJqcWpscHk3amN2biJ9.te6TENoEkiQS3MjaAgz08Q";
