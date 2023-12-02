@@ -24,5 +24,9 @@ export const store = reactive({
         store.latSecs = "";
         store.latHems = "";
         store.percision = "";
-    }
+        store.resultLon = "";
+        store.resultLat = "";
+    },
+    resultLon: "",
+    resultLat: ""
 });
