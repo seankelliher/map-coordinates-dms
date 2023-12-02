@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
-import mapboxgl from "mapbox-gl";
 import { store } from "../composables/store.js";
+import mapboxgl from "mapbox-gl";
 import "../../node_modules/mapbox-gl/dist/mapbox-gl.css";
 
 // Token restricted to single URL.

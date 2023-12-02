@@ -1,6 +1,6 @@
 <script setup>
 import { store } from "../composables/store.js";
-//import AreaMap from "./AreaMap.vue";
+import AreaMap from "./AreaMap.vue";
 
 function convertLon() {
     const degs = Number(store.lonDegs);
