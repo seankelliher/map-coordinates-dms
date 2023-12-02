@@ -10,8 +10,8 @@ html {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
-    align-items: flex-start; /* cross axis */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 main {
@@ -32,7 +32,7 @@ section {
     background: #ece1cf;
     border-radius: 8px;
     flex: initial;
-    animation: fadeIn 1s;
+    animation: fade-in 1s;
 }
 
 form {
@@ -111,7 +111,7 @@ nav {
 }
 
 button {
-    /*width: 30%;*/
+    /* width: 30%; */
     margin: 0;
     padding: 0;
     background: #115fab;
@@ -160,7 +160,7 @@ figure {
     flex-flow: row wrap;
     justify-content: center; /* main axis */
     align-items: flex-start; /* cross axis */
-    animation: fadeInDelayed 2s;
+    animation: fade-in-delayed 2s;
 }
 
 img {
@@ -171,22 +171,19 @@ img {
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes fade-in {
     0% {
         opacity: 0;
-        /* transform:translate(0, -5px); */
     }
 
     100% {
         opacity: 1;
-        /* transform:translate(0, 0); */
     }
 }
 
-@keyframes fadeInDelayed {
+@keyframes fade-in-delayed {
     0% {
         opacity: 0;
-        /* transform:translate(0, -5px); */
     }
 
     50% {
@@ -195,8 +192,25 @@ img {
 
     100% {
         opacity: 1;
-        /* transform:translate(0, 0); */
     }
+}
+
+/* Styles for Mapbox map */
+#map-area {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.map-container {
+    width: 100%;
+    flex: 1;
 }
 
 /* Font styles and their media queries */
