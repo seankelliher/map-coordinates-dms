@@ -50,7 +50,7 @@ function convertLat() {
         </section>
 
         <figure>
-            <img src="images/task-alt-48-icon.svg" alt="check icon">
+            <img src="/images/task-alt-48-icon.svg" alt="check icon">
         </figure>
 
         <div class="results">
