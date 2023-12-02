@@ -1,5 +1,6 @@
 <script setup>
 import { store } from "../composables/store.js";
+import AreaMap from "./AreaMap.vue";
 
 function convertLon() {
     const degs = Number(store.lonDegs);
@@ -17,6 +18,7 @@ function convertLon() {
     const multiplier = Math.pow(10, Number(store.percision) || 0);
     longitude = Math.round(longitude * multiplier) / multiplier;
 
+    store.resultLon = longitude;
     return longitude;
 }
 
@@ -36,6 +38,7 @@ function convertLat() {
     const multiplier = Math.pow(10, Number(store.percision) || 0);
     latitude = Math.round(latitude * multiplier) / multiplier;
 
+    store.resultLat = latitude;
     return latitude;
 }
 </script>
@@ -69,6 +72,9 @@ function convertLat() {
         <nav>
             <button @click="store.updateStep('step1'), store.resetVars()">Start over</button>
         </nav>
+        <div id="map-area">
+            <AreaMap />
+        </div>
     </main>
 </template>
 
