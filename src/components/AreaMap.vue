@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { store } from "../composables/store.js";
 import mapboxgl from "mapbox-gl";
 import "../../node_modules/mapbox-gl/dist/mapbox-gl.css";
@@ -8,11 +8,13 @@ import "../../node_modules/mapbox-gl/dist/mapbox-gl.css";
 mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xwb2E5c2NkMGx1NDJqcWpscHk3amN2biJ9.te6TENoEkiQS3MjaAgz08Q";
 
 let map;
-let mapContainer;
+// let mapContainer;
+const mapContainer = ref(null);
 
 onMounted(() => {
     map = new mapboxgl.Map({
-        container: mapContainer,
+        // container: mapContainer,
+        container: mapContainer.value,
         style: "mapbox://styles/mapbox/streets-v12",
         center: [`${store.resultLon}`, `${store.resultLat}`],
         zoom: 14.0
