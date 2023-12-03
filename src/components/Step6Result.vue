@@ -54,10 +54,10 @@ function convertLat() {
         </figure>
 
         <div class="results">
-            <p>You may use these in computer-based mapping software such as Mapbox, CARTO, and Google Maps.</p>
+            <p>You may use these Digital Degrees coordinates in computer-based mapping software such as Mapbox, CARTO, and Google Maps.</p>
             <ul>
-                <li>Longitude: {{ convertLon() }} Digital Degrees</li>
-                <li>Latitude: {{ convertLat() }} Digital Degrees</li>
+                <li>Longitude: {{ convertLon() }} &deg;</li>
+                <li>Latitude: {{ convertLat() }} &deg;</li>
                 <li>Accurate to
                     <span v-if="store.percision === '0'">within 111km</span>
                     <span v-if="store.percision === '1'">11.1km</span>
