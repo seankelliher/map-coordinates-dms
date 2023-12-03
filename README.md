@@ -15,7 +15,7 @@ IN DEVELOPMENT: mostly built, now testing.
 * Enter longitude.
 ![screen shot of project](/screenshots/map-coordinates-dms-screenshot2.png?s=600)
 
-* Enter latitude, with error message.
+* Enter latitude, with error message for empty input.
 ![screen shot of project](/screenshots/map-coordinates-dms-screenshot3.png?s=600)
 
 * Results, with Mapbox map.
