@@ -197,10 +197,10 @@ img {
 
 /* Styles for Mapbox map */
 #map-area {
-    width: 100%;
+    width: 90%;
     height: 500px;
     margin: 0;
-    padding: 0;
+    padding: 0 5%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
