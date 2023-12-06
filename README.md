@@ -5,7 +5,7 @@ Guided interface to convert longitude and latitude coordinates from the traditio
 
 ## Project Status
 
-IN DEVELOPMENT: mostly built, now testing.
+Next steps, I want to do more extensive accessibility and browser testing.
 
 ## Project Screen Shots
 
@@ -39,7 +39,13 @@ Visit the localhost port displayed in the terminal after running `npm run dev`.
 
 ## Reflection
 
-Reflection to come.
+ I wanted to build a "step by step" guided interface for users to convert map coordinates in the Degrees, Minutes, and Seconds format, found on printed maps, to the Digital Degrees format used in computer-based mapping software.
+
+ The math to convert the coordinates is not too difficult, although there are a number of steps to keep organized.
+
+ Error handling was challenging. I needed to determine all the possible ways users may enter incorrect data or no data, have ways to catch these errors, and respond with helpful error messages.
+
+ Integrating a dynamic Mapbox map based on the coordinates a user provides also took some time. With this, the most frustrating aspect was that the map's container would easily collapse, making the map disappear. I needed to find the correct CSS combinations that would keep it visible.
 
 ## Acknowledgments
 
