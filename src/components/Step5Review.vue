@@ -25,8 +25,20 @@ import { store } from "../composables/store.js";
         </div>
 
         <nav>
-            <button @click="store.updateStep('step4')">No, previous</button>
-            <button @click="store.updateStep('step6')">Yes, convert</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step4')"
+                @keyup.enter="store.updateStep('step4')"
+            >
+                No, previous
+            </button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step6')"
+                @keyup.enter="store.updateStep('step6')"
+            >
+                Yes, convert
+            </button>
         </nav>
     </main>
 </template>

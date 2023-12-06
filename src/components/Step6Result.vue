@@ -70,7 +70,13 @@ function convertLat() {
         </div>
 
         <nav>
-            <button @click="store.updateStep('step1'), store.resetVars()">Start over</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step1'), store.resetVars()"
+                @keyup.enter="store.updateStep('step1'), store.resetVars()"
+            >
+                Start over
+            </button>
         </nav>
         <div id="map-area">
             <AreaMap />

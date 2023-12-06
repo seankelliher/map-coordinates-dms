@@ -136,8 +136,20 @@ function checkLonSuccess() {
         </form>
 
         <nav>
-            <button @click="store.updateStep('step1')">Previous</button>
-            <button @click="checkLonSuccess() ? store.updateStep('step3') : ''">Next</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step1')"
+                @keyup.enter="store.updateStep('step1')"
+            >
+                Previous
+            </button>
+            <button
+                tabindex="0"
+                @click="checkLonSuccess() ? store.updateStep('step3') : ''"
+                @keyup.enter="checkLonSuccess() ? store.updateStep('step3') : ''"
+            >
+                Next
+            </button>
         </nav>
     </main>
 </template>

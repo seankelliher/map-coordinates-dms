@@ -91,8 +91,20 @@ function checkPercisionSuccess() {
         </form>
 
         <nav>
-            <button @click="store.updateStep('step3')">Previous</button>
-            <button @click="checkPercisionSuccess() ? store.updateStep('step5') : ''">Next</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step3')"
+                @keyup.enter="store.updateStep('step3')"
+            >
+                Previous
+            </button>
+            <button
+                tabindex="0"
+                @click="checkPercisionSuccess() ? store.updateStep('step5') : ''"
+                @keyup.enter="checkPercisionSuccess() ? store.updateStep('step5') : ''"
+            >
+                Next
+            </button>
         </nav>
     </main>
 </template>

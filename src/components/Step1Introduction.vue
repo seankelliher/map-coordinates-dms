@@ -13,7 +13,13 @@ import { store } from "../composables/store.js";
         </div>
 
         <nav>
-            <button @click="store.updateStep('step2')">Start</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step2')"
+                @keyup.enter="store.updateStep('step2')"
+            >
+                Start
+            </button>
         </nav>
     </main>
 </template>

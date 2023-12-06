@@ -136,8 +136,20 @@ function checkLatSuccess() {
         </form>
 
         <nav>
-            <button @click="store.updateStep('step2')">Previous</button>
-            <button @click="checkLatSuccess() ? store.updateStep('step4') : ''">Next</button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step2')"
+                @keyup.enter="store.updateStep('step2')"
+            >
+                Previous
+            </button>
+            <button
+                tabindex="0"
+                @click="checkLatSuccess() ? store.updateStep('step4') : ''"
+                @keyup.enter="checkLatSuccess() ? store.updateStep('step4') : ''"
+            >
+                Next
+            </button>
         </nav>
     </main>
 </template>
