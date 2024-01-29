@@ -103,7 +103,7 @@ function checkLatSuccess() {
                     id="lat-secs"
                     name="lat-secs"
                     minlength="1"
-                    maxlength="2"
+                    maxlength="7"
                     :value="`${store.latSecs}`"
                     @input="updateLatSecs($event.target.value)"
                 >

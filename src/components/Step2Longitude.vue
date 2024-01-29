@@ -103,7 +103,7 @@ function checkLonSuccess() {
                     id="lon-secs"
                     name="lon-secs"
                     minlength="1"
-                    maxlength="2"
+                    maxlength="7"
                     :value="`${store.lonSecs}`"
                     @input="updateLonSecs($event.target.value)"
                 >
