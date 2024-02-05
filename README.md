@@ -3,6 +3,11 @@
 
 Guided interface to convert longitude and latitude coordinates from the traditional Degrees Minutes, Seconds (DMS) format to the Digital Degrees (DD) format used in computer-based mapping. Interface built with Vue.js. [View working component](https://sean-kelliher-map-coordinates-dms.netlify.app).
 
+For a sample location to convert, use the Eiffel Tower:
+* Longitide: 2 degs, 17 mins,  40.8984 secs East.
+* Latitude: 48 degs, 51 mins, 29.1348 secs North.
+* (for proximity, "within 11.1 meters" works well).
+
 ## Project Status
 
 Next steps, I want to do more extensive accessibility and browser testing.
