@@ -200,7 +200,7 @@ img {
 #map-area {
     width: 90%;
     height: 500px;
-    margin: 0;
+    margin: 1em 0;
     padding: 0 5%;
     display: flex;
     flex-flow: column nowrap;
