@@ -1,12 +1,7 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/map-coordinates-dms?style=flat-square)](/LICENSE.txt)
 ## Map Coordinates DMS
 
-Guided interface to convert longitude and latitude coordinates from the traditional Degrees Minutes, Seconds (DMS) format to the Digital Degrees (DD) format used in computer-based mapping. Interface built with Vue.js. [View working component](https://sean-kelliher-map-coordinates-dms.netlify.app).
-
-For a sample location to convert, use the Eiffel Tower:
-* Longitide: 2 degs, 17 mins,  40.8984 secs East.
-* Latitude: 48 degs, 51 mins, 29.1348 secs North.
-* (for proximity, "within 11.1 meters" works well).
+Guided "step by step" interface to convert longitude and latitude coordinates from traditional Degrees Minutes, Seconds (DMS) format to Digital Degrees (DD) format used in computer-based mapping. After conversion, the interface dynamically generates a map of the converted location. This project is built with Vue.js and Mapbox. [View working component](https://sean-kelliher-map-coordinates-dms.netlify.app).
 
 ## Project Status
 
@@ -41,16 +36,6 @@ To Run Vue:
 To Visit App:
 
 Visit the localhost port displayed in the terminal after running `npm run dev`.
-
-## Reflection
-
- I wanted to build a "step by step" guided interface for users to convert map coordinates in the Degrees, Minutes, and Seconds format, found on printed maps, to the Digital Degrees format used in computer-based mapping software.
-
- The math to convert the coordinates is not too difficult, although there are a number of steps to keep organized.
-
- Error handling was challenging. I needed to determine all the possible ways users may enter incorrect data or no data, have ways to catch these errors, and respond with helpful error messages.
-
- Integrating a dynamic Mapbox map based on the coordinates a user provides also took some time. With this, the most frustrating aspect was that the map's container would easily collapse, making the map disappear. I needed to find the correct CSS combinations that would keep it visible.
 
 ## Acknowledgments
 
