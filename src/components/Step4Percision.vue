@@ -25,11 +25,11 @@ function checkPercisionSuccess() {
 <template>
     <main v-if="store.step === 'step4'">
         <section>
-            <h1>We'll decide on percision.</h1>
+            <h1>Choose percision</h1>
         </section>
 
         <form>
-            <p>More numbers after the decimal point bring greater percison, but also require more computing power to run mapping software. How much percison do you need?</p>
+            <p>More numbers after the decimal point brings greater percison, but also requires mapping software to use more computing power. How much percison do you need?</p>
 
             <fieldset>
                 <input

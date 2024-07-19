@@ -5,7 +5,7 @@ import { store } from "../composables/store.js";
 <template>
     <main v-if="store.step === 'step5'">
         <section>
-            <h1>Let's review your coordinates.</h1>
+            <h1>Review your coordinates</h1>
         </section>
 
         <div class="results">

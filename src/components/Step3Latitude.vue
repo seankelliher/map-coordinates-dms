@@ -64,7 +64,7 @@ function checkLatSuccess() {
 <template>
     <main v-if="store.step === 'step3'">
         <section>
-            <h1>Next, we'll gather latitude coordinates.</h1>
+            <h1>Add latitude coordinates</h1>
         </section>
 
         <form>

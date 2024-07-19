@@ -46,7 +46,7 @@ function convertLat() {
 <template>
     <main v-if="store.step === 'step6'">
         <section>
-            <h1>Here are your results.</h1>
+            <h1>Results</h1>
         </section>
 
         <figure>
@@ -54,7 +54,7 @@ function convertLat() {
         </figure>
 
         <div class="results">
-            <p>You may use these Digital Degrees coordinates in computer-based mapping software such as Mapbox, CARTO, and Google Maps.</p>
+            <p>You may use these Digital Degrees coordinates in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
             <ul>
                 <li>Longitude: {{ convertLon() }} &deg;</li>
                 <li>Latitude: {{ convertLat() }} &deg;</li>

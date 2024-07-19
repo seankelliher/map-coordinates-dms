@@ -64,7 +64,7 @@ function checkLonSuccess() {
 <template>
     <main v-if="store.step === 'step2'">
         <section>
-            <h1>We'll gather longitude coordinates.</h1>
+            <h1>Add longitude coordinates</h1>
         </section>
 
         <form>
