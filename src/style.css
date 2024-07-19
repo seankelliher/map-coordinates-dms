@@ -126,6 +126,7 @@ button {
 }
 
 button:hover {
+    cursor: pointer;
     background: #224876;
 }
 
@@ -151,10 +152,6 @@ button:hover {
     button {
         width: 30%;
     }
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 figure {
