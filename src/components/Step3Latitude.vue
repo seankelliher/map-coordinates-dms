@@ -59,6 +59,15 @@ function checkLatSuccess() {
         return true;
     }
 }
+
+// If user does not complete a field, gets error msg, and then clicks previous.
+// This functions clears the error message.
+function clearErrorMsg() {
+    latDegsError.value = false;
+    latMinsError.value = false;
+    latSecsError.value = false;
+    latHemsError.value = false;
+}
 </script>
 
 <template>
@@ -138,8 +147,8 @@ function checkLatSuccess() {
         <nav>
             <button
                 tabindex="0"
-                @click="store.updateStep('step2')"
-                @keyup.enter="store.updateStep('step2')"
+                @click="store.updateStep('step2'), clearErrorMsg()"
+                @keyup.enter="store.updateStep('step2'), clearErrorMsg()"
             >
                 Previous
             </button>

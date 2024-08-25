@@ -20,6 +20,12 @@ function checkPercisionSuccess() {
         return true;
     }
 }
+
+// If user does not complete a field, gets error msg, and then clicks previous.
+// This functions clears the error message.
+function clearErrorMsg() {
+    percisionError.value = false;
+}
 </script>
 
 <template>
@@ -93,8 +99,8 @@ function checkPercisionSuccess() {
         <nav>
             <button
                 tabindex="0"
-                @click="store.updateStep('step3')"
-                @keyup.enter="store.updateStep('step3')"
+                @click="store.updateStep('step3'), clearErrorMsg()"
+                @keyup.enter="store.updateStep('step3'), clearErrorMsg()"
             >
                 Previous
             </button>
