@@ -5,15 +5,21 @@ import { store } from "../composables/store.js";
 <template>
     <main v-if="store.step === 'step5'">
         <section>
-            <h1>Review your coordinates</h1>
+            <h1>Review</h1>
         </section>
 
         <div class="results">
-            <p>You entered these coordinates. Does everything look okay?</p>
+            <p><strong>You entered these coordinates. Does everything look okay?</strong></p>
             <ul>
-                <li>Longitude: {{ store.lonDegs }} degrees, {{ store.lonMins }} minutes, {{ store.lonSecs }} seconds {{ store.lonHems.toUpperCase() }}</li>
-                <li>Latitude: {{ store.latDegs }} degrees, {{ store.latMins }} minutes, {{ store.latSecs }} seconds {{ store.latHems.toUpperCase() }}</li>
-                <li>Percision:
+                <li>Longitude: {{ store.lonDegs }} degs, {{ store.lonMins }} mins, {{ store.lonSecs }} secs, {{ store.lonHems }}</li>
+            </ul>
+
+            <ul>
+                <li>Latitude: {{ store.latDegs }} degs, {{ store.latMins }} mins, {{ store.latSecs }} secs, {{ store.latHems }}</li>
+            </ul>                
+
+            <ul>
+                <li>Percision: 
                     <span v-if="store.percision === '0'">within 111km</span>
                     <span v-if="store.percision === '1'">11.1km</span>
                     <span v-if="store.percision === '2'">1.11km</span>

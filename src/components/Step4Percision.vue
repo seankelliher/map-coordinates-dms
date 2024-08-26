@@ -31,13 +31,14 @@ function clearErrorMsg() {
 <template>
     <main v-if="store.step === 'step4'">
         <section>
-            <h1>Choose percision</h1>
+            <h1>Percision</h1>
         </section>
 
         <form>
             <p>More numbers after the decimal point brings greater percison, but also requires mapping software to use more computing power. How much percison do you need?</p>
 
             <fieldset>
+                <legend>Choose percision</legend>
                 <input
                     type="radio"
                     id="decimal0"
@@ -82,7 +83,7 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '4'"
                 >
-                <label for="decimal4">within 11.1 meters</label>
+                <label for="decimal4">within 11.1 meters (recommended)</label>
                 <input
                     type="radio"
                     id="decimal5"

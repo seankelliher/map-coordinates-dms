@@ -73,12 +73,12 @@ function clearErrorMsg() {
 <template>
     <main v-if="store.step === 'step3'">
         <section>
-            <h1>Add latitude coordinates</h1>
+            <h1>Latitude Coordinates</h1>
         </section>
 
         <form>
             <fieldset>
-                <label for="lat-degs">How many degrees?</label>
+                <legend>Enter coordinates</legend>
                 <input
                     type="text"
                     id="lat-degs"
@@ -88,11 +88,9 @@ function clearErrorMsg() {
                     :value="`${store.latDegs}`"
                     @input="updateLatDegs($event.target.value)"
                 >
+                <label for="lat-degs">degrees</label>
                 <p class="error" v-if="latDegsError">Enter a number 0 - 90</p>
-            </fieldset>
 
-            <fieldset>
-                <label for="lat-mins">How many minutes?</label>
                 <input
                     type="text"
                     id="lat-mins"
@@ -102,11 +100,9 @@ function clearErrorMsg() {
                     :value="`${store.latMins}`"
                     @input="updateLatMins($event.target.value)"
                 >
+                <label for="lat-mins">minutes</label>
                 <p class="error" v-if="latMinsError">Enter a number 0 - 60</p>
-            </fieldset>
 
-            <fieldset>
-                <label for="lat-secs">How many seconds?</label>
                 <input
                     type="text"
                     id="lat-secs"
@@ -116,12 +112,14 @@ function clearErrorMsg() {
                     :value="`${store.latSecs}`"
                     @input="updateLatSecs($event.target.value)"
                 >
+                <label for="lat-secs">seconds</label>
                 <p class="error" v-if="latSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
-            <h2>And, then enter a hemisphere.</h2>
+            <!-- <h2>And, then enter a hemisphere.</h2> -->
 
             <fieldset>
+                <legend>Choose a hemisphere</legend>
                 <input
                     type="radio"
                     id="lat-north"

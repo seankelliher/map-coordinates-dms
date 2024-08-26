@@ -73,12 +73,12 @@ function clearErrorMsg() {
 <template>
     <main v-if="store.step === 'step2'">
         <section>
-            <h1>Add longitude coordinates</h1>
+            <h1>Longitude Coordinates</h1>
         </section>
 
         <form>
             <fieldset>
-                <label for="lon-degs">How many degrees?</label>
+                <legend>Enter coordinates</legend>
                 <input
                     type="text"
                     id="lon-degs"
@@ -88,11 +88,9 @@ function clearErrorMsg() {
                     :value="`${store.lonDegs}`"
                     @input="updateLonDegs($event.target.value)"
                 >
+                <label for="lon-degs">degrees</label>
                 <p class="error" v-if="lonDegsError">Enter a number 0 - 180</p>
-            </fieldset>
 
-            <fieldset>
-                <label for="lon-mins">How many minutes?</label>
                 <input
                     type="text"
                     id="lon-mins"
@@ -102,11 +100,9 @@ function clearErrorMsg() {
                     :value="`${store.lonMins}`"
                     @input="updateLonMins($event.target.value)"
                 >
+                <label for="lon-mins">minutes</label>
                 <p class="error" v-if="lonMinsError">Enter a number 0 - 60</p>
-            </fieldset>
 
-            <fieldset>
-                <label for="lon-secs">How many seconds?</label>
                 <input
                     type="text"
                     id="lon-secs"
@@ -116,12 +112,12 @@ function clearErrorMsg() {
                     :value="`${store.lonSecs}`"
                     @input="updateLonSecs($event.target.value)"
                 >
+                <label for="lon-secs">seconds</label>
                 <p class="error" v-if="lonSecsError">Enter a number 0 - 60</p>
             </fieldset>
-
-            <h2>And, then enter a hemisphere.</h2>
-
             <fieldset>
+
+                <legend>Choose a hemisphere</legend>
                 <input
                     type="radio"
                     id="lon-east"

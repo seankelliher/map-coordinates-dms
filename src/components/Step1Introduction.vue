@@ -5,16 +5,16 @@ import { store } from "../composables/store.js";
 <template>
     <main v-if="store.step === 'step1'">
         <section>
-            <h1>Let's get started</h1>
+            <h1>Let's Get Started</h1>
         </section>
 
         <div class="results">
-            <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format. DD format is used in computer-based mapping such as Mapbox, CARTO, and Google Maps. <strong>Don't have a location in mind?</strong> Use a preset location to see how this works.</p>
+            <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format. DD format is used in computer-based mapping such as Mapbox, CARTO, and Google Maps. <strong>Below are a few preset locations if you just want to see how this works.</strong></p>
         </div>
 
         <form>
             <fieldset>
-                <legend>Locations</legend>
+                <legend>Choose a location</legend>
                 <input
                     type="radio"
                     id="sample-own"
@@ -41,7 +41,7 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'moma'"
                 >
-                <label for="met-museum">Museum Modern Art, New York</label>
+                <label for="moma-museum">Museum Modern Art, New York</label>
                 <input
                     type="radio"
                     id="hallgrim-church"
@@ -50,7 +50,7 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'hallgrim'"
                 >
-                <label for="hallgrim">Hallgrimskirkja, Reykjavík</label>
+                <label for="hallgrim-church">Hallgrimskirkja, Reykjavík</label>
             </fieldset>
         </form>
 
