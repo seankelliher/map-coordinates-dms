@@ -47,7 +47,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '0'"
                 >
-                <label for="decimal0">within 111km</label>
+                <label
+                    for="decimal0"
+                    class="label-radio"
+                >
+                    within 111km
+                </label>
                 <input
                     type="radio"
                     id="decimal1"
@@ -56,7 +61,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '1'"
                 >
-                <label for="decimal1">within 11.1km</label>
+                <label
+                    for="decimal1"
+                    class="label-radio"
+                >
+                    within 11.1km
+                </label>
                 <input
                     type="radio"
                     id="decimal2"
@@ -65,7 +75,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '2'"
                 >
-                <label for="decimal2">within 1.11km</label>
+                <label
+                    for="decimal2"
+                    class="label-radio"
+                >
+                    within 1.11km
+                </label>
                 <input
                     type="radio"
                     id="decimal3"
@@ -74,7 +89,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '3'"
                 >
-                <label for="decimal3">within 111 meters</label>
+                <label
+                    for="decimal3"
+                    class="label-radio"
+                >
+                    within 111 meters
+                </label>
                 <input
                     type="radio"
                     id="decimal4"
@@ -83,7 +103,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '4'"
                 >
-                <label for="decimal4">within 11.1 meters (recommended)</label>
+                <label
+                    for="decimal4"
+                    class="label-radio"
+                >
+                    within 11.1 meters (recommended)
+                </label>
                 <input
                     type="radio"
                     id="decimal5"
@@ -92,7 +117,12 @@ function clearErrorMsg() {
                     @input="updatePercision($event.target.value)"
                     :checked="store.percision === '5'"
                 >
-                <label for="decimal5">within 1.11 meters</label>
+                <label
+                    for="decimal5"
+                    class="label-radio"
+                >
+                    within 1.11 meters
+                </label>
                 <p class="error" v-if="percisionError">Choose a level of percision.</p>
             </fieldset>
         </form>

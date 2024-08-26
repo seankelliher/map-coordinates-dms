@@ -23,7 +23,12 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'own'"
                 >
-                <label for="sample-own">Enter your own</label>
+                <label
+                    for="sample-own"
+                    class="label-radio"
+                >
+                    Enter your own
+                </label>
                 <input
                     type="radio"
                     id="eiffel-tower"
@@ -32,7 +37,12 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'eiffel'"
                 >
-                <label for="eiffel-tower">Eiffel Tower, Paris</label>
+                <label
+                    for="eiffel-tower"
+                    class="label-radio"
+                >
+                    Eiffel Tower, Paris
+                </label>
                 <input
                     type="radio"
                     id="moma-museum"
@@ -41,7 +51,12 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'moma'"
                 >
-                <label for="moma-museum">Museum Modern Art, New York</label>
+                <label
+                    for="moma-museum"
+                    class="label-radio"
+                >
+                    Museum Modern Art, New York
+                </label>
                 <input
                     type="radio"
                     id="hallgrim-church"
@@ -50,7 +65,12 @@ import { store } from "../composables/store.js";
                     @input="store.updateSampleLocs($event.target.value)"
                     :checked="store.sampleLocs === 'hallgrim'"
                 >
-                <label for="hallgrim-church">Hallgrimskirkja, Reykjavík</label>
+                <label
+                    for="hallgrim-church"
+                    class="label-radio"
+                >
+                    Hallgrimskirkja, Reykjavík
+                </label>
             </fieldset>
         </form>
 

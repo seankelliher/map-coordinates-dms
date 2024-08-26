@@ -88,7 +88,12 @@ function clearErrorMsg() {
                     :value="`${store.latDegs}`"
                     @input="updateLatDegs($event.target.value)"
                 >
-                <label for="lat-degs">degrees</label>
+                <label
+                    for="lat-degs"
+                    class="label-txt"
+                >
+                    degrees
+                </label>
                 <p class="error" v-if="latDegsError">Enter a number 0 - 90</p>
 
                 <input
@@ -100,7 +105,12 @@ function clearErrorMsg() {
                     :value="`${store.latMins}`"
                     @input="updateLatMins($event.target.value)"
                 >
-                <label for="lat-mins">minutes</label>
+                <label
+                    for="lat-mins"
+                    class="label-txt"
+                >
+                    minutes
+                </label>
                 <p class="error" v-if="latMinsError">Enter a number 0 - 60</p>
 
                 <input
@@ -112,7 +122,12 @@ function clearErrorMsg() {
                     :value="`${store.latSecs}`"
                     @input="updateLatSecs($event.target.value)"
                 >
-                <label for="lat-secs">seconds</label>
+                <label
+                    for="lat-secs"
+                    class="label-txt"
+                >
+                    seconds
+                </label>
                 <p class="error" v-if="latSecsError">Enter a number 0 - 60</p>
             </fieldset>
 
@@ -128,7 +143,12 @@ function clearErrorMsg() {
                     @input="updateLatHems($event.target.value)"
                     :checked="store.latHems === 'north'"
                 >
-                <label for="lat-north">North</label>
+                <label
+                    for="lat-north"
+                    class="label-radio"
+                >
+                    North
+                </label>
                 <input
                     type="radio"
                     id="lat-south"
@@ -137,7 +157,12 @@ function clearErrorMsg() {
                     @input="updateLatHems($event.target.value)"
                     :checked="store.latHems === 'south'"
                 >
-                <label for="lat-south">South</label>
+                <label
+                    for="lat-south"
+                    class="label-radio"
+                >
+                    South
+                </label>
                 <p class="error" v-if="latHemsError">Choose a hemisphere</p>
             </fieldset>
         </form>
