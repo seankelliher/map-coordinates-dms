@@ -69,6 +69,10 @@ function convertLat() {
             </ul>
         </div>
 
+        <div id="map-area">
+            <AreaMap />
+        </div>
+
         <nav>
             <button
                 tabindex="0"
@@ -78,9 +82,6 @@ function convertLat() {
                 Start over
             </button>
         </nav>
-        <div id="map-area">
-            <AreaMap />
-        </div>
     </main>
 </template>
 

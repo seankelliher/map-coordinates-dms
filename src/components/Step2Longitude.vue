@@ -76,7 +76,7 @@ function clearErrorMsg() {
             <h1>Longitude Coordinates</h1>
         </section>
 
-        <form>
+        <form class="height">
             <fieldset>
                 <legend>Enter coordinates</legend>
                 <input

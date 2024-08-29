@@ -8,11 +8,8 @@ import { store } from "../composables/store.js";
             <h1>Let's Get Started</h1>
         </section>
 
-        <div class="results">
+        <form class="height">
             <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format. DD format is used in computer-based mapping such as Mapbox, CARTO, and Google Maps. <strong>Below are a few preset locations if you just want to see how this works.</strong></p>
-        </div>
-
-        <form>
             <fieldset>
                 <legend>Choose a location</legend>
                 <input

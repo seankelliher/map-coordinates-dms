@@ -19,7 +19,7 @@ const latHemsTitleCase = computed(() => {
             <h1>Review</h1>
         </section>
 
-        <div class="results">
+        <div class="results height">
             <p><strong>You entered these coordinates. Does everything look okay?</strong></p>
             <ul>
                 <li>Longitude: {{ store.lonDegs }} degs, {{ store.lonMins }} mins, {{ store.lonSecs }} secs, {{ lonHemsTitleCase }}</li>
