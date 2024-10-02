@@ -35,7 +35,7 @@ function clearErrorMsg() {
         </section>
 
         <form class="height">
-            <p>More numbers after the decimal point brings greater percison, but also requires mapping software to use more computing power. How much percison do you need?</p>
+            <p>More numbers after the decimal point brings greater percision, but also requires mapping software to use more computing power. How much percision do you need?</p>
 
             <fieldset>
                 <legend>Choose percision</legend>
