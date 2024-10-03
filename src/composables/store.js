@@ -14,7 +14,7 @@ export const store = reactive({
     latMins: "",
     latSecs: "",
     latHems: "", // North, South.
-    percision: "",
+    precision: "",
     updateSampleLocs(loc) {
         if (loc === "own") {
             store.sampleLocs = "own";
@@ -26,7 +26,7 @@ export const store = reactive({
             store.latMins = "";
             store.latSecs = "";
             store.latHems = ""; // North, South.
-            store.percision = "";
+            store.precision = "";
         }
 
         if (loc === "eiffel") {
@@ -39,7 +39,7 @@ export const store = reactive({
             store.latMins = "51";
             store.latSecs = "29.1348";
             store.latHems = "north"; // North, South.
-            store.percision = "4";
+            store.precision = "4";
         }
 
         if (loc === "moma") {
@@ -52,7 +52,7 @@ export const store = reactive({
             store.latMins = "45";
             store.latSecs = "41.4324";
             store.latHems = "north"; // North, South.
-            store.percision = "4";
+            store.precision = "4";
         }
 
         if (loc === "hallgrim") {
@@ -65,7 +65,7 @@ export const store = reactive({
             store.latMins = "8";
             store.latSecs = "30.1776";
             store.latHems = "north"; // North, South.
-            store.percision = "4";
+            store.precision = "4";
         }
     },
     resetVars() {
@@ -78,7 +78,7 @@ export const store = reactive({
         store.latMins = "";
         store.latSecs = "";
         store.latHems = "";
-        store.percision = "";
+        store.precision = "";
         store.resultLon = "";
         store.resultLat = "";
     },
