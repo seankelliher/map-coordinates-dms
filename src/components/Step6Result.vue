@@ -15,7 +15,7 @@ function convertLon() {
         longitude = (degs + mins + secs) * -1;
     }
 
-    const multiplier = Math.pow(10, Number(store.percision) || 0);
+    const multiplier = Math.pow(10, Number(store.precision) || 0);
     longitude = Math.round(longitude * multiplier) / multiplier;
 
     store.resultLon = longitude;
@@ -35,7 +35,7 @@ function convertLat() {
         latitude = (degs + mins + secs) * -1;
     }
 
-    const multiplier = Math.pow(10, Number(store.percision) || 0);
+    const multiplier = Math.pow(10, Number(store.precision) || 0);
     latitude = Math.round(latitude * multiplier) / multiplier;
 
     store.resultLat = latitude;
@@ -59,12 +59,12 @@ function convertLat() {
                 <li>Longitude: {{ convertLon() }} &deg;</li>
                 <li>Latitude: {{ convertLat() }} &deg;</li>
                 <li>Accurate to
-                    <span v-if="store.percision === '0'">within 111km</span>
-                    <span v-if="store.percision === '1'">11.1km</span>
-                    <span v-if="store.percision === '2'">1.11km</span>
-                    <span v-if="store.percision === '3'">111 meters</span>
-                    <span v-if="store.percision === '4'">11.1 meters</span>
-                    <span v-if="store.percision === '5'">1.11 meters</span>  
+                    <span v-if="store.precision === '0'">within 111km</span>
+                    <span v-if="store.precision === '1'">11.1km</span>
+                    <span v-if="store.precision === '2'">1.11km</span>
+                    <span v-if="store.precision === '3'">111 meters</span>
+                    <span v-if="store.precision === '4'">11.1 meters</span>
+                    <span v-if="store.precision === '5'">1.11 meters</span>  
                 </li>
             </ul>
         </div>
