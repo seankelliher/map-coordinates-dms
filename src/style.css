@@ -17,7 +17,7 @@ body {
 
 main {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1em; /* longhand 0 0 1em 0 */
     padding: 0;
     flex: initial;
     display: flex;
@@ -73,7 +73,7 @@ form {
 fieldset {
     width: 90%;
     margin: 0 0 1em;
-    padding: 3em 5% 1em 5%;
+    padding: 3em 5% 1em; /* longhand 3em 5% 1em 5% */
     background: #f3f3fa; /* N-96 */
     border: 2px solid #e8e7ef; /* N-92 */
     border-radius: 8px;
