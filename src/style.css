@@ -80,43 +80,27 @@ form {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    flex: 1;
+    flex: initial;
 }
 
-.height {
-    min-height: 70vh;
-}
-/* Height class keeps buttons in stable position */
-/*@media (min-width: 300px) and (max-width: 399px) {
+/* Helps keeps buttons in same position as users tabs through screens */
+@media (min-width: 300px) and (max-width: 399px) {
     .height {
-        min-height: 531px;
+        min-height: 540px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
     .height {
-        min-height: 499px;
+        min-height: 520px;
     }
 }
 
-@media (min-width: 500px) and (max-width: 599px) {
+@media (min-width: 500px) {
     .height {
-        min-height: 475px;
+        min-height: 500px;
     }
 }
-
-@media (min-width: 600px) and (max-width: 639px) {
-    .height {
-        min-height: 478px;
-    }
-}
-
-@media (min-width: 640px) {
-    .height {
-        min-height: 483px;
-    }
-}*/
-
 
 fieldset {
     width: 90%;
@@ -256,16 +240,6 @@ figure.check-mark {
 }
 
 /* Animations */
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes fade-in-delayed {
     0% {
         opacity: 0;
@@ -319,7 +293,7 @@ p, li {
     font-size: var(--fs0);
     line-height: 1.8;
     color: #171c1f; /* N-10 */
-    margin-top: 0; /* TESTING */
+    margin-top: 0;
 }
 
 p a {
@@ -374,7 +348,7 @@ legend {
     font-size: var(--fs1);
     line-height: 1.5;
     color: #171c1f; /* N-10 */
-    position: absolute; /* Used with fieldset, puts it INSIDE fieldset border */
+    position: absolute; /* Used with fieldset, puts text INSIDE fieldset border */
     top: 0.5em;
 }
 
