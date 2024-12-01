@@ -4,7 +4,7 @@ import { store } from "../composables/store.js";
 
 <template>
     <main v-if="store.step === 'step1'">
-        <section class="height">
+        <section>
             <figure class="full">
                 <img src="/images/hikers-qom-province-iran-mostafameraji.jpg" alt="hikers gaze on snow covered hills ahead of them">
                 <figcaption hidden>Hikers on their way to the summit of Valijiya in Qom province, Iran. Photo: Mostafameraji</figcaption>
