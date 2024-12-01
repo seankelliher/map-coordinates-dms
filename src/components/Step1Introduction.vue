@@ -4,72 +4,17 @@ import { store } from "../composables/store.js";
 
 <template>
     <main v-if="store.step === 'step1'">
-        <section>
-            <h1>Let's Get Started</h1>
-        </section>
+        <section class="height">
+            <figure class="full">
+                <img src="/images/hikers-qom-province-iran-mostafameraji.jpg" alt="hikers gaze on snow covered hills ahead of them">
+                <figcaption hidden>Hikers on their way to the summit of Valijiya in Qom province, Iran. Photo: Mostafameraji</figcaption>
+            </figure>
 
-        <form class="height">
-            <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format. DD format is used in computer-based mapping such as Mapbox, CARTO, and Google Maps. <strong>Below are a few preset locations if you just want to see how this works.</strong></p>
-            <fieldset>
-                <legend>Choose a location</legend>
-                <input
-                    type="radio"
-                    id="sample-own"
-                    name="sample-locs"
-                    value="own"
-                    @input="store.updateSampleLocs($event.target.value)"
-                    :checked="store.sampleLocs === 'own'"
-                >
-                <label
-                    for="sample-own"
-                    class="label-radio"
-                >
-                    Enter your own
-                </label>
-                <input
-                    type="radio"
-                    id="eiffel-tower"
-                    name="sample-locs"
-                    value="eiffel"
-                    @input="store.updateSampleLocs($event.target.value)"
-                    :checked="store.sampleLocs === 'eiffel'"
-                >
-                <label
-                    for="eiffel-tower"
-                    class="label-radio"
-                >
-                    Eiffel Tower, Paris
-                </label>
-                <input
-                    type="radio"
-                    id="moma-museum"
-                    name="sample-locs"
-                    value="moma"
-                    @input="store.updateSampleLocs($event.target.value)"
-                    :checked="store.sampleLocs === 'moma'"
-                >
-                <label
-                    for="moma-museum"
-                    class="label-radio"
-                >
-                    Museum Modern Art, New York
-                </label>
-                <input
-                    type="radio"
-                    id="hallgrim-church"
-                    name="sample-locs"
-                    value="hallgrim"
-                    @input="store.updateSampleLocs($event.target.value)"
-                    :checked="store.sampleLocs === 'hallgrim'"
-                >
-                <label
-                    for="hallgrim-church"
-                    class="label-radio"
-                >
-                    Hallgrimskirkja, Reykjavík
-                </label>
-            </fieldset>
-        </form>
+            <div class="text">
+                <h1 class="n10">Let's get started</h1>
+                <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format, used in computer-based mapping such as Mapbox, CARTO, and Google Maps. We provide some preset locations if you just want to see how this works. (Above: Qom province, Iran. Photo: <a href="https://commons.wikimedia.org/wiki/File:صعود_به_قله_ولیجیا_در_حوالی_روستای_جاسب_-_استان_قم_05.jpg" target="_blank">Mostafameraji</a>)</p>
+            </div>
+        </section>
 
         <nav>
             <button
