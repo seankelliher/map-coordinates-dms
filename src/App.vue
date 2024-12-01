@@ -1,20 +1,22 @@
 <script setup>
 import Step1Introduction from "./components/Step1Introduction.vue";
-import Step2Longitude from "./components/Step2Longitude.vue";
-import Step3Latitude from "./components/Step3Latitude.vue";
-import Step4Precision from "./components/Step4Precision.vue";
-import Step5Review from "./components/Step5Review.vue";
-import Step6Result from "./components/Step6Result.vue";
+import Step2Location from "./components/Step2Location.vue";
+import Step3Longitude from "./components/Step3Longitude.vue";
+import Step4Latitude from "./components/Step4Latitude.vue";
+import Step5Precision from "./components/Step5Precision.vue";
+import Step6Review from "./components/Step6Review.vue";
+import Step7Result from "./components/Step7Result.vue";
 </script>
 
 <template>
     <div id="container">
         <Step1Introduction />
-        <Step2Longitude />
-        <Step3Latitude />
-        <Step4Precision />
-        <Step5Review />
-        <Step6Result />
+        <Step2Location />
+        <Step3Longitude />
+        <Step4Latitude />
+        <Step5Precision />
+        <Step6Review />
+        <Step7Result />
     </div>
 </template>
 
