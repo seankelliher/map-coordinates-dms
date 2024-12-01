@@ -1,7 +1,22 @@
+/* @link https://utopia.fyi/type/calculator?c=320,17,1.125,1280,19,1.125,2,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+    --fs0: clamp(1.0625rem, 1.0208rem + 0.2083vw, 1.1875rem);
+    --fs1: clamp(1.1953rem, 1.1484rem + 0.2344vw, 1.3359rem);
+    --fs2: clamp(1.3447rem, 1.292rem + 0.2637vw, 1.5029rem);
+}
+
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
-    background: #faf9ff; /* N-98 */
+    background: #f5fafd; /* N-98 */
     margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 #container {
@@ -9,6 +24,7 @@ body {
     max-width: 640px;
     margin: 0 auto;
     padding: 0;
+    background: #f0f4f7; /* N-96 */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -26,63 +42,95 @@ main {
     align-items: flex-start; /* cross axis */
 }
 
-section {
+header {
     width: 90%;
-    margin: 0 0 2em;
+    margin: 0 0 2em; /* longhand 0 0 2em 0 */
     padding: 0 5%;
-    background: #d8e2ff; /* P-90 */
+    background: #cee5ff; /* S-90 */
+    border-bottom: 2px solid #a1cbf5; /* S-40 */
     flex: initial;
-    position: relative;
 }
 
-section::before {
-    content: "";
-    position: absolute;
-    inset: 0 calc((100vw - 100%) / -2) -2px calc((100vw - 100%) / -2);
-    background: #d8e2ff; /* P-90 */
-    border-bottom: 2px solid #001a42; /* P-10 */
-    z-index: -1;
+section{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+figure.full {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
+.text {
+    width: 90%;
+    margin: 0;
+    padding: 0.5em 5%;
+    flex: initial;
 }
 
 form {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    flex: initial;
+    flex: 1;
 }
 
+.height {
+    min-height: 70vh;
+}
 /* Height class keeps buttons in stable position */
-@media (min-width: 300px) and (max-width: 499px) {
+/*@media (min-width: 300px) and (max-width: 399px) {
     .height {
-        min-height: 580px;
+        min-height: 531px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .height {
+        min-height: 499px;
     }
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
     .height {
-        min-height: 570px;
+        min-height: 475px;
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 639px) {
     .height {
-        min-height: 540px;
+        min-height: 478px;
     }
 }
+
+@media (min-width: 640px) {
+    .height {
+        min-height: 483px;
+    }
+}*/
+
 
 fieldset {
     width: 90%;
     margin: 0 0 1em;
     padding: 3em 5% 1em; /* longhand 3em 5% 1em 5% */
-    background: #f3f3fa; /* N-96 */
-    border: 2px solid #e8e7ef; /* N-92 */
+    background: #eaeef2;  /* N-94 */
+    border: 2px solid #dee3e6; /* N-90 */
     border-radius: 8px;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
     align-items: center; /* cross axis */
-    position: relative;
+    position: relative; /* Used with legend */
 }
 
 input[type="text"] {
@@ -97,7 +145,6 @@ input[type="text"] {
     margin: 0;
     padding: 0;
 }
-
 
 input[type="radio"] {
     width: 10%;
@@ -139,18 +186,33 @@ nav {
 button {
     margin: 0;
     padding: 0;
-    background: #ffdcc2; /* T-90 */
-    border: 1px solid #88511d; /* T-40 */
+    background: #eae78e; /* P-90 */
+    border: 2px solid #636117; /* P-40 */
     border-radius: 12px;
-    color: #2e1500; /* T-10 */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* 100 to 1000 */
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    font-size: var(--fs0);
     line-height: 1.6;
-    font-weight: 400;
+    color: #1d1d00; /* P-10 */
 }
 
 button:hover {
     cursor: pointer;
-    background: #ffb77b; /* T-80 */
+    background: #d0cc00; /* P-80 */
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
@@ -177,7 +239,7 @@ button:hover {
     }
 }
 
-figure {
+figure.check-mark {
     width: 90%;
     margin: 0;
     padding: 0 5%;
@@ -189,11 +251,8 @@ figure {
     animation: fade-in-delayed 2s;
 }
 
-img {
-    width: 100%;
+.check-mark-img {
     max-width: 48px;
-    height: auto;
-    display: block;
 }
 
 /* Animations */
@@ -239,97 +298,109 @@ img {
     flex: 1;
 }
 
-/* Font styles and their media queries */
+/* Font styles */
 p, li {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 4500; /* 100 to 1000 */
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    font-size: var(--fs0);
     line-height: 1.8;
-    font-weight: 400;
-    color: #1a1b20; /* N-10 */
+    color: #171c1f; /* N-10 */
+    margin-top: 0; /* TESTING */
+}
+
+p a {
+    color: #636100; /* P-40 */
+    text-decoration: underline;
+}
+
+p a:hover {
+    color: #4a4900;  /* P-30 */
+    text-decoration: underline;
 }
 
 label, input {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* 100 to 1000 */
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    font-size: var(--fs0);
     line-height: 1.5;
-    font-weight: 400;
-    color: #1a1b20; /* N-10 */
+    color: #171c1f; /* N-10 */
 }
 
 legend {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600; /* 100 to 1000 */
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    font-size: var(--fs1);
     line-height: 1.5;
-    font-weight: 500;
-    color: #1a1b20; /* N-10 */
-    position: absolute;
+    color: #171c1f; /* N-10 */
+    position: absolute; /* Used with fieldset, puts it INSIDE fieldset border */
     top: 0.5em;
 }
 
 h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.3;
-    font-weight: 600;
-    color: #001a42; /* P-10 */
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* 100 to 1000 */
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    font-size: var(--fs2);
+    line-height: 1.5;
+    color: #001d33; /* S-10 */
 }
 
-h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.3;
-    font-weight: 500;
-    color: #1a1b20; /* N-10 */
-}
-
-/* Media queries for fonts */
-@media (min-width: 300px) and (max-width: 399px) {
-    p, li, label, input, legend, button {
-        font-size: 1.0625em; /* 17px */
-    }
-
-    h1 {
-        font-size: 1.125em; /* 18 px */
-    }
-
-    h2 {
-        font-size: 1.125em; /* 18 px */
-    }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-    p, li, label, input, legend, button {
-        font-size: 1.125em; /* 18 px */
-    }
-
-    h1 {
-        font-size: 1.1875em; /* 19px */
-    }
-
-    h2 {
-        font-size: 1.1875em; /* 19px */
-    }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-    p, li, label, input, legend, button {
-        font-size: 1.1875em; /* 19px */
-    }
-
-    h1 {
-        font-size: 1.25em; /* 20px */
-    }
-
-    h2 {
-        font-size: 1.25em; /* 20px */
-    }
-}
-
-@media (min-width: 600px) {
-    p, li, label, input, legend, button {
-        font-size: 1.1875em; /* 19px */
-    }
-
-    h1 {
-        font-size: 1.3125em; /* 21px */
-    }
-
-    h2 {
-        font-size: 1.3125em; /* 21px */
-    }
+/* If h1 places on grey bg */
+.n10 {
+    color: #171c1f; /* N-10 */
 }
