@@ -43,5 +43,7 @@ Visit the localhost port displayed in the terminal after running `npm run dev`.
 * Helpful advice on rounding numbers in JavaScript from [Stackoverflow](https://stackoverflow.com/questions/7342957/how-do-you-round-to-one-decimal-place-in-javascript).
 * Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
 * Linting guidance from [ESLint](https://eslint.org) and [Stylelint](https://stylelint.io).
-* Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
+* Design guidance from Google's [Material Design](https://material.io/design).
+* Fonts and icons from [Google Fonts](https://fonts.google.com).
+* Fluid typography guidance from [Utopia](https://utopia.fyi).
 * Shields from [Shields](https://shields.io).
