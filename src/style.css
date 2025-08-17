@@ -7,7 +7,7 @@
 
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
-    background: #f5fafd; /* N-98 */
+    background: #f0f4f7; /* N-96 */
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -24,7 +24,6 @@ img {
     max-width: 640px;
     margin: 0 auto;
     padding: 0;
-    background: #f0f4f7; /* N-96 */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -47,8 +46,18 @@ header {
     margin: 0 0 2em; /* longhand 0 0 2em 0 */
     padding: 0 5%;
     background: #cee5ff; /* S-90 */
-    border-bottom: 2px solid #a1cbf5; /* S-40 */
+    border-bottom: 2px solid #a1cbf5;  /* S-40 */
     flex: initial;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc((100vw - 100%) / -2) -2px;
+    background: #cee5ff; /* S-90 */
+    border-bottom: 2px solid #a1cbf5; /* S-40 */
+    z-index: -1;
 }
 
 section{
@@ -276,7 +285,7 @@ figure.check-mark {
 p, li {
     font-family: "Roboto Flex", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 4500; /* 100 to 1000 */
+    font-weight: 400; /* 100 to 1000 */
     font-style: normal;
     font-variation-settings:
     "slnt" 0,
