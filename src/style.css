@@ -10,9 +10,7 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     background: #f5fafd; /* surface */
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
 img {
@@ -137,11 +135,21 @@ nav {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
+    background: #f0f4f7;  /* surface container low */
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
     align-items: flex-start; /* cross axis */
+    position: relative;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc((100vw - 100%) / -2) 0;
+    background: #f0f4f7;  /* surface container low */
+    z-index: -1;
 }
 
 button {
