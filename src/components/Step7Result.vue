@@ -44,38 +44,40 @@ function convertLat() {
 </script>
 
 <template>
-    <main v-if="store.step === 'step7'">
+    <div id="container" v-if="store.step === 'step7'">
         <header>
             <h1>Results</h1>
         </header>
 
-        <figure class="check-mark">
-            <img
-                src="/images/task-alt-48-icon.svg"
-                alt="check icon"
-                class="check-mark-img"
-            >
-        </figure>
+        <main>
+            <figure class="check-mark">
+                <img
+                    src="/images/task-alt-48-icon.svg"
+                    alt="check icon"
+                    class="check-mark-img"
+                >
+            </figure>
 
-        <div class="results">
-            <p>You may use these Digital Degrees coordinates in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
-            <ul>
-                <li>Longitude: {{ convertLon() }} &deg;</li>
-                <li>Latitude: {{ convertLat() }} &deg;</li>
-                <li>Accurate to
-                    <span v-if="store.precision === '0'">within 111km</span>
-                    <span v-if="store.precision === '1'">11.1km</span>
-                    <span v-if="store.precision === '2'">1.11km</span>
-                    <span v-if="store.precision === '3'">111 meters</span>
-                    <span v-if="store.precision === '4'">11.1 meters</span>
-                    <span v-if="store.precision === '5'">1.11 meters</span>  
-                </li>
-            </ul>
-        </div>
+            <div class="text">
+                <p>You may use these Digital Degrees coordinates in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
+                <ul>
+                    <li>Longitude: {{ convertLon() }} &deg;</li>
+                    <li>Latitude: {{ convertLat() }} &deg;</li>
+                    <li>Accurate to
+                        <span v-if="store.precision === '0'">within 111km</span>
+                        <span v-if="store.precision === '1'">11.1km</span>
+                        <span v-if="store.precision === '2'">1.11km</span>
+                        <span v-if="store.precision === '3'">111 meters</span>
+                        <span v-if="store.precision === '4'">11.1 meters</span>
+                        <span v-if="store.precision === '5'">1.11 meters</span>  
+                    </li>
+                </ul>
+            </div>
 
-        <div id="map-area">
-            <AreaMap />
-        </div>
+            <div id="map-area">
+                <AreaMap />
+            </div>
+        </main>
 
         <nav>
             <button
@@ -86,7 +88,7 @@ function convertLat() {
                 Start over
             </button>
         </nav>
-    </main>
+    </div>
 </template>
 
 <style scoped>
