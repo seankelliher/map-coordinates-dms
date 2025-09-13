@@ -9,15 +9,13 @@ import Step7Result from "./components/Step7Result.vue";
 </script>
 
 <template>
-    <div id="container">
-        <Step1Introduction />
-        <Step2Location />
-        <Step3Longitude />
-        <Step4Latitude />
-        <Step5Precision />
-        <Step6Review />
-        <Step7Result />
-    </div>
+    <Step1Introduction />
+    <Step2Location />
+    <Step3Longitude />
+    <Step4Latitude />
+    <Step5Precision />
+    <Step6Review />
+    <Step7Result />
 </template>
 
 <style scoped>
