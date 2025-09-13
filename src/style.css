@@ -203,13 +203,13 @@ button:hover {
 figure.check-mark {
     width: 90%;
     margin: 0;
-    padding: 0 5%;
+    padding: 1em 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: center; /* main axis */
     align-items: flex-start; /* cross axis */
-    animation: fade-in-delayed 2s;
+    animation: fade-in-delayed 3s;
 }
 
 .check-mark-img {
