@@ -15,7 +15,7 @@ import { store } from "../composables/store.js";
 
             <div class="text">
                 <h2>Let's get started</h2>
-                <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format, used in computer-based mapping such as Mapbox, CARTO, and Google Maps. We provide some preset locations if you just want to see how this works.</p>
+                <p>We'll convert longitude and latitude coordinates from the Degrees, Minutes, Seconds (DMS) format to the Digital Degrees (DD) format, used in computer-based mapping such as Mapbox, CARTO, and Google Maps. <span class="emphasis">We provide some preset locations if you just want to see how this works.</span></p>
             </div>
         </main>
 
