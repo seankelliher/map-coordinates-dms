@@ -10,7 +10,7 @@ import { store } from "../composables/store.js";
 
         <main>
             <div class="text">
-                <p>You may enter the coordinates of your own location. If you choose one of the preset locations, all upcoming fields will be "filled in" for you.</p>
+                <p><span class="emphasis">Choose your own or a preset location.</span> If you choose a preset location, its coordinates will be provided.</p>
             </div>
 
             <form>
@@ -18,14 +18,14 @@ import { store } from "../composables/store.js";
                     <legend>Choose a location</legend>
                     <input
                         type="radio"
-                        id="sample-own"
-                        name="sample-locs"
+                        id="own-loc"
+                        name="loc-names"
                         value="own"
-                        @input="store.updateSampleLocs($event.target.value)"
-                        :checked="store.sampleLocs === 'own'"
+                        @input="store.updateLoc($event.target.value)"
+                        :checked="store.currentLoc === 'own'"
                     >
                     <label
-                        for="sample-own"
+                        for="own-loc"
                         class="label-radio"
                     >
                         Enter your own
@@ -33,10 +33,10 @@ import { store } from "../composables/store.js";
                     <input
                         type="radio"
                         id="eiffel-tower"
-                        name="sample-locs"
+                        name="loc-names"
                         value="eiffel"
-                        @input="store.updateSampleLocs($event.target.value)"
-                        :checked="store.sampleLocs === 'eiffel'"
+                        @input="store.updateLoc($event.target.value)"
+                        :checked="store.currentLoc === 'eiffel'"
                     >
                     <label
                         for="eiffel-tower"
@@ -47,10 +47,10 @@ import { store } from "../composables/store.js";
                     <input
                         type="radio"
                         id="moma-museum"
-                        name="sample-locs"
+                        name="loc-names"
                         value="moma"
-                        @input="store.updateSampleLocs($event.target.value)"
-                        :checked="store.sampleLocs === 'moma'"
+                        @input="store.updateLoc($event.target.value)"
+                        :checked="store.currentLoc === 'moma'"
                     >
                     <label
                         for="moma-museum"
@@ -61,10 +61,10 @@ import { store } from "../composables/store.js";
                     <input
                         type="radio"
                         id="hallgrim-church"
-                        name="sample-locs"
+                        name="loc-names"
                         value="hallgrim"
-                        @input="store.updateSampleLocs($event.target.value)"
-                        :checked="store.sampleLocs === 'hallgrim'"
+                        @input="store.updateLoc($event.target.value)"
+                        :checked="store.currentLoc === 'hallgrim'"
                     >
                     <label
                         for="hallgrim-church"
