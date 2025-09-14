@@ -5,7 +5,8 @@ export const store = reactive({
     updateStep(s) {
         store.step = s;
     },
-    sampleLocs: "own",
+    currentLoc: "own",
+    currentLocName: "Enter your own",
     lonDegs: "",
     lonMins: "",
     lonSecs: "",
@@ -15,9 +16,10 @@ export const store = reactive({
     latSecs: "",
     latHems: "", // North, South.
     precision: "",
-    updateSampleLocs(loc) {
+    updateLoc(loc) {
         if (loc === "own") {
-            store.sampleLocs = "own";
+            store.currentLoc = "own";
+            store.currentLocName = "Enter your own";
             store.lonDegs = "";
             store.lonMins = "";
             store.lonSecs = "";
@@ -30,7 +32,8 @@ export const store = reactive({
         }
 
         if (loc === "eiffel") {
-            store.sampleLocs = "eiffel";
+            store.currentLoc = "eiffel";
+            store.currentLocName = "Eiffel Tower";
             store.lonDegs = "2";
             store.lonMins = "17";
             store.lonSecs = "40.8984";
@@ -43,7 +46,8 @@ export const store = reactive({
         }
 
         if (loc === "moma") {
-            store.sampleLocs = "moma";
+            store.currentLoc = "moma";
+            store.currentLocName = "Museum Modern Art";
             store.lonDegs = "73";
             store.lonMins = "58";
             store.lonSecs = "41.7756";
@@ -56,7 +60,8 @@ export const store = reactive({
         }
 
         if (loc === "hallgrim") {
-            store.sampleLocs = "hallgrim";
+            store.currentLoc = "hallgrim";
+            store.currentLocName = "Hallgrimskirkja";
             store.lonDegs = "21";
             store.lonMins = "55";
             store.lonSecs = "35.8968";
@@ -69,7 +74,8 @@ export const store = reactive({
         }
     },
     resetVars() {
-        store.sampleLocs = "own";
+        store.currentLoc = "own";
+        store.currentLocName = "Enter your";
         store.lonDegs = "";
         store.lonMins = "";
         store.lonSecs = "";
