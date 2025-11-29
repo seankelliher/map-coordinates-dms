@@ -31,7 +31,7 @@ const latHemsTitleCase = computed(() => {
                 </ul>                
 
                 <ul>
-                    <li>Precision: 
+                    <li>Precision:
                         <span v-if="store.precision === '0'">within 111km</span>
                         <span v-if="store.precision === '1'">11.1km</span>
                         <span v-if="store.precision === '2'">1.11km</span>
