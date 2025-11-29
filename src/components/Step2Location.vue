@@ -10,12 +10,13 @@ import { store } from "../composables/store.js";
 
         <main>
             <div class="text">
-                <p><span class="emphasis">Choose your own or a preset location.</span> If you choose a preset location, its coordinates will be provided.</p>
+                <h2>Choose your own or a preset location</h2>
+                <p>If you choose a preset location, its coordinates will be provided.</p>
             </div>
 
             <form>
                 <fieldset>
-                    <legend>Choose a location</legend>
+                    <legend>Your location</legend>
                     <input
                         type="radio"
                         id="own-loc"

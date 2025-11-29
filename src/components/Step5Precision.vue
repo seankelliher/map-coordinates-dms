@@ -36,7 +36,8 @@ function clearErrorMsg() {
 
         <main>
             <div class="text">
-                <p>Let's choose precision. More numbers after the decimal point brings greater precision, but also requires mapping software to use more computing power. <span class="emphasis">How much precision do you need?</span></p>
+                <h2>Let's choose precision</h2>
+                <p>More numbers after the decimal point brings greater precision, but also requires mapping software to use more computing power.</p>
             </div>
 
             <form>

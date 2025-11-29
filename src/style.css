@@ -428,7 +428,7 @@ h1 {
     "YTFI" 738,
     "YTLC" 514,
     "YTUC" 712;
-    font-size: var(--fs2);
+    font-size: var(--fs1);
     line-height: 1.5;
     color: #0f4a73; /* on secondary container */
 }
@@ -450,7 +450,7 @@ h2 {
     "YTFI" 738,
     "YTLC" 514,
     "YTUC" 712;
-    font-size: var(--fs1);
+    font-size: var(--fs2);
     line-height: 1.5;
     color: #171c1f; /* on surface */
 }

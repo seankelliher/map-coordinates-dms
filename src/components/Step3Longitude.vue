@@ -78,7 +78,7 @@ function clearErrorMsg() {
 
         <main>
             <div class="text">
-                <p><span class="emphasis">{{ store.currentLocName }}</span> Longitude Coordinates</p>
+                <h2>{{ store.currentLocName }}</h2>
             </div>
 
             <form>

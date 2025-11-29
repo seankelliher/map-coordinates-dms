@@ -49,16 +49,9 @@ function convertLat() {
         </header>
 
         <main>
-            <figure class="check-mark">
-                <img
-                    src="/images/task-alt-48-icon.svg"
-                    alt="check icon"
-                    class="check-mark-img"
-                >
-            </figure>
-
             <div class="text">
-                <p><span class="emphasis">Here are your Digital Degrees coordinates.</span> You may use them in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
+                <h2>Your coordinates in Digital Degrees</h2>
+                <p>You may use them in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
                 <ul>
                     <li>Longitude: {{ convertLon() }} &deg;</li>
                     <li>Latitude: {{ convertLat() }} &deg;</li>
@@ -72,6 +65,13 @@ function convertLat() {
                     </li>
                 </ul>
             </div>
+            <figure class="check-mark">
+                <img
+                    src="/images/task-alt-48-icon.svg"
+                    alt="check icon"
+                    class="check-mark-img"
+                >
+            </figure>
         </main>
 
         <nav>

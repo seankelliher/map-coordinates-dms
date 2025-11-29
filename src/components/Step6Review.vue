@@ -21,7 +21,8 @@ const latHemsTitleCase = computed(() => {
 
         <main>
             <div class="text">
-                <p>You entered these coordinates. <span class="emphasis">Does everything look okay?</span></p>
+                <h2>Does everything look okay?</h2>
+                <p>You entered these coordinates:</p>
                 <ul>
                     <li>Longitude: {{ store.lonDegs }} degs, {{ store.lonMins }} mins, {{ store.lonSecs }} secs, {{ lonHemsTitleCase }}</li>
                 </ul>
