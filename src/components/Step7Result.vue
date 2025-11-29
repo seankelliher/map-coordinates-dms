@@ -1,6 +1,5 @@
 <script setup>
 import { store } from "../composables/store.js";
-import AreaMap from "./AreaMap.vue";
 
 function convertLon() {
     const degs = Number(store.lonDegs);
@@ -59,7 +58,7 @@ function convertLat() {
             </figure>
 
             <div class="text">
-                <p>You may use these Digital Degrees coordinates in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
+                <p><span class="emphasis">Here are your Digital Degrees coordinates.</span> You may use them in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
                 <ul>
                     <li>Longitude: {{ convertLon() }} &deg;</li>
                     <li>Latitude: {{ convertLat() }} &deg;</li>
@@ -73,10 +72,6 @@ function convertLat() {
                     </li>
                 </ul>
             </div>
-
-            <div id="map-area">
-                <AreaMap />
-            </div>
         </main>
 
         <nav>
@@ -86,6 +81,13 @@ function convertLat() {
                 @keyup.enter="store.updateStep('step1'), store.resetVars()"
             >
                 Start over
+            </button>
+            <button
+                tabindex="0"
+                @click="store.updateStep('step8')"
+                @keyup.enter="store.updateStep('step8')"
+            >
+                View map
             </button>
         </nav>
     </div>
