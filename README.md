@@ -18,9 +18,11 @@ Project meets general accessibility (WACG) and cross-browser requirements. More 
 * Enter latitude, with error message for empty input.
 ![screen shot of project](/screenshots/map-coordinates-dms-screenshot3.png?s=600)
 
-* Results, with Mapbox map.
+* Converted results.
 ![screen shot of project](/screenshots/map-coordinates-dms-screenshot4.png?s=600)
 
+* Map of area.
+![screen shot of project](/screenshots/map-coordinates-dms-screenshot5.png?s=600)
 ## Installation and Setup Instructions
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
