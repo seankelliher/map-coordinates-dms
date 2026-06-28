@@ -171,6 +171,9 @@ function clearErrorMsg() {
                     <p class="error" v-if="latHemsError">Choose a hemisphere</p>
                 </fieldset>
             </form>
+            <div class="notice">
+                <p>Tip: Latitude is your position North or South of the equator. Think of it as a "ladder" to climb up or down the globe.</p>
+            </div>
         </main>
 
         <nav>

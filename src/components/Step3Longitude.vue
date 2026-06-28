@@ -169,6 +169,9 @@ function clearErrorMsg() {
                     <p class="error" v-if="lonHemsError">Choose a hemisphere</p>
                 </fieldset>
             </form>
+            <div class="notice">
+                <p>Tip: Longitude is your position East or West of the Prime Meridian, an imaginary line that runs between North and South poles and passes through Greenwich, a borough in London, England.</p>
+            </div>
         </main>
 
         <nav>

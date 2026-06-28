@@ -50,6 +50,9 @@ function convertLat() {
 
         <main>
             <div class="text">
+                <div class="tag green">
+                    <span>Converted</span>
+                </div>
                 <h2>Your coordinates in Digital Degrees</h2>
                 <p>You may use them in computer-based mapping such as Mapbox, CARTO, and Google Maps.</p>
                 <ul>

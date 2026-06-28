@@ -21,6 +21,10 @@ const latHemsTitleCase = computed(() => {
 
         <main>
             <div class="text">
+                <div class="tag purple">
+                    <span>Inputted</span>
+                </div>
+
                 <h2>Does everything look okay?</h2>
                 <p>You entered these coordinates:</p>
                 <ul>

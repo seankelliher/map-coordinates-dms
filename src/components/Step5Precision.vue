@@ -37,7 +37,6 @@ function clearErrorMsg() {
         <main>
             <div class="text">
                 <h2>Let's choose precision</h2>
-                <p>More numbers after the decimal point brings greater precision, but also requires mapping software to use more computing power.</p>
             </div>
 
             <form>
@@ -130,6 +129,9 @@ function clearErrorMsg() {
                     <p class="error" v-if="precisionError">Choose a level of precision.</p>
                 </fieldset>
             </form>
+            <div class="notice">
+                <p>Tip: More numbers after the decimal point brings greater precision, but requires mapping software to use more computing power.</p>
+            </div>
         </main>
 
         <nav>
