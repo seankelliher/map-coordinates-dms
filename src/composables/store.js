@@ -4,6 +4,14 @@ export const store = reactive({
     step: "step1",
     updateStep(s) {
         store.step = s;
+        const windowHt = window.innerHeight;
+        const bodyHt = document.querySelector("body").clientHeight;
+
+        if (bodyHt > windowHt) {
+            window.scrollTo(0, 0, {
+                behavior: "smooth"
+            });
+        }
     },
     currentLoc: "own",
     currentLocName: "Enter your own",
